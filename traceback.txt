@@ -1,0 +1,37 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 573, in script call
+    call day36
+  File "game/days/day36.rpy", line 169, in script
+    narrator "another imp flies through the still open door{"
+Exception: Open text tag at end of string u'another imp flies through the still open door{'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 573, in script call
+    call day36
+  File "game/days/day36.rpy", line 169, in script
+    narrator "another imp flies through the still open door{"
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 572, in display_say
+    what_text.update()
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 1694, in update
+    tokens = self.tokenize(text)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\text\text.py", line 2164, in tokenize
+    tokens.extend(textsupport.tokenize(i))
+  File "textsupport.pyx", line 122, in renpy.text.textsupport.tokenize
+Exception: Open text tag at end of string u'another imp flies through the still open door{'.
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+STRELL 1.2
+Tue Feb 02 20:49:27 2021
