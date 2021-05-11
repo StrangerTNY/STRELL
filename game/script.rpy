@@ -425,8 +425,8 @@ screen stressbar:
         xalign 0.0165 yalign 0.13
         xmaximum 200
         ymaximum 75
-        left_bar Frame("StressFULL2.png", 0, 00 )
-        right_bar Frame("StressEMPTY.png", 0, 0)
+        left_bar Frame("StressGaugeV2.png", 0, 00 )
+        right_bar Frame("StressGaugeV2empty.png", 0, 0)
         #thumb "_theme_bordered/brvslider_thumb.png"
         thumb_shadow None
 
@@ -438,8 +438,8 @@ screen soulbar:
         xalign 0.0195 yalign 0.00
         xmaximum 500
         ymaximum 75
-        left_bar Frame("SoulsFULL2.png", 0, 0)
-        right_bar Frame("SoulsEMPTY.png", 0, 0)
+        left_bar Frame("SoulGaugeV2.png", 0, 0)
+        right_bar Frame("SoulGaugeV2empty.png", 0, 0)
         #thumb "_theme_marker/inkvslider_thumb.png"
         thumb_shadow None
 
@@ -450,8 +450,8 @@ screen impeachmentbar:
         xalign 0.016 yalign 0.07
         xmaximum 200
         ymaximum 75
-        left_bar Frame("ImpeachmentFULL2.png", 0, 0)
-        right_bar Frame("ImpeachmentEMPTY.png", 0, 0)
+        left_bar Frame("ImpeachmentGaugeV2.png", 0, 0)
+        right_bar Frame("ImpeachmentGaugeV2empty.png", 0, 0)
         #thumb "_theme_regal/revslider_thumb.png"
         thumb_shadow None
 
