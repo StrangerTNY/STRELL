@@ -1,6 +1,6 @@
 #Event 1
 label impmorework:
-
+    play music "audio/Timer.mp3"
     menu: #dilemmata1
         "Share some of your own workload": #impeachment +
             jump shareWork

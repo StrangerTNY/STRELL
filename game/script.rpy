@@ -393,6 +393,7 @@ image imp:
 #AUDIO
 define audio.knock = "audio/knock1.mp3"
 define audio.crashing = "audio/crashing.mp3"
+define audio.timerrunout = "audio/Failure.mp3"
 
 #Flags
 $ impStrike = False
@@ -525,13 +526,14 @@ transform alpha_dissolve:
     # This is to fade the bar in and out, and is only required once in your script
 
 screen countdown:
-    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump), Play("sound", "Failure.mp3")])
     bar value time range timer_range xalign 0.5 yalign 0.5 xmaximum 300 at alpha_dissolve # This is the timer bar.
     
 init:
     $ timer_range = 0
     $ timer_jump = 0
     $renpy.music.register_channel("soundMoi", mixer ="voice", loop = False)
+    $renpy.music.register_channel("timer", mixer ="music", loop = False)
     transform flip:
         xzoom -1.0
 

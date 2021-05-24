@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/choices/choices.rpy", line 254: else clause expects a non-empty block.
-    else:
+File "game/days/dayONE.rpy", line 269: stop requires a channel
+    stop 
          ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Feb 02 20:45:41 2021
+Mon May 24 15:44:47 2021

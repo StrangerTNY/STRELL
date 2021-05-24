@@ -256,17 +256,22 @@ label dayONE:
     narrator "How do you want to increase the amount of souls extracted? \n
     Choose quickly, or STRELL will choose for you!"
 
-    $ time = 4
-    $ timer_range = 4
+    $ time = 7.5
+    $ timer_range = 7.5
     $ timer_jump = 'equipment'
     show screen countdown
+    play timer "audio/Timer.mp3"
+    queue timer timerrunout
     menu:
+        
         extend ''
         "Order more shifts for imps":
             hide screen countdown
+            stop timer
             jump impshift #+impeachment, +souls setFlag: Sabotage by rival
         "Overwork the equipment":
             hide screen countdown
+            stop timer
             jump equipment
             #+souls, +stress setFlag: Soul vats overheating
 
