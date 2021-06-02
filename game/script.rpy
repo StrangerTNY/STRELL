@@ -419,40 +419,52 @@ init:
     $ day = 1
     $ gameOver = False
 
+screen baroverlay:
+    zorder 1
+    frame:
+        xalign 0.0
+        yalign 0.0
+        background None
+        vbox:
+            image "Meter_Overlay.png"
 #Stressbar
 screen stressbar:
+    
     #text "Stress" vertical True size 20 xalign 0.02 yalign 0.05  outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
     bar value StaticValue (stress, 100):
-        xalign 0.0165 yalign 0.13
-        xmaximum 200
-        ymaximum 75
-        left_bar Frame("StressGaugeV2.png", 0, 00 )
-        right_bar Frame("StressGaugeV2empty.png", 0, 0)
+        xalign 0.018 yalign 0.16
+        xmaximum 254
+        ymaximum 72
+        left_bar Frame("Stress_meter2.png", 0, 00 )
+        right_bar Frame("Stress_meter2_empty.png", 0, 0)
         #thumb "_theme_bordered/brvslider_thumb.png"
         thumb_shadow None
+    
 
 
 #Soulbar
 screen soulbar:
+    
     #text "Souls" vertical True size 20 xalign 0.05 yalign 0.05  outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
     bar value StaticValue (souls, 100):
-        xalign 0.0195 yalign 0.00
+        xalign 0.018 yalign 0.035
         xmaximum 500
-        ymaximum 75
-        left_bar Frame("SoulGaugeV2.png", 0, 0)
-        right_bar Frame("SoulGaugeV2empty.png", 0, 0)
+        ymaximum 56
+        left_bar Frame("Soul_meter2.png", 0, 0)
+        right_bar Frame("Soul_meter2_empty.png", 0, 0)
         #thumb "_theme_marker/inkvslider_thumb.png"
         thumb_shadow None
 
 #Impeachmentbar
 screen impeachmentbar:
+    
     #text "Impeachment" vertical True size 11 xalign 0.08 yalign 0.05  outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
     bar value StaticValue (impeachment, 100):
-        xalign 0.016 yalign 0.07
-        xmaximum 200
-        ymaximum 75
-        left_bar Frame("ImpeachmentGaugeV2.png", 0, 0)
-        right_bar Frame("ImpeachmentGaugeV2empty.png", 0, 0)
+        xalign 0.018 yalign 0.09
+        xmaximum 254
+        ymaximum 72
+        left_bar Frame("Impeachment_meter2.png", 0, 0)
+        right_bar Frame("Impeachment_meter2_empty.png", 0, 0)
         #thumb "_theme_regal/revslider_thumb.png"
         thumb_shadow None
 
@@ -551,6 +563,7 @@ label start:
         #Start Day One
     call callDay from _call_callDay
     scene bgHell
+    show screen baroverlay
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
@@ -559,6 +572,7 @@ label start:
 
     #End Day 1
     hide ignias
+    hide screen baroverlay
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
@@ -569,6 +583,7 @@ label start:
     $ souls = 0
     call callDay2 from _call_callDay2
     scene bgHell
+    show screen baroverlay
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar

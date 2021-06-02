@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/days/dayONE.rpy", line 269: stop requires a channel
-    stop 
-         ^
+File "game/script.rpy", line 565: end of line expected.
+    show screen impeachmentbar behind baroverlay
+                               ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon May 24 15:44:47 2021
+Wed Jun 02 18:28:30 2021

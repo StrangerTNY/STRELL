@@ -1,56 +1,69 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 558, in script call
-    call dayONE from _call_dayONE
-  File "game/choices/choices.rpy", line 59, in script
-    $increaseSouls(43)
-  File "game/choices/choices.rpy", line 59, in <module>
-    $increaseSouls(43)
-  File "game/script.rpy", line 480, in increaseSouls
-    renpy.pause(0.01)
-IOError: Couldn't find file 'audio/Failure.mp3'.
+  File "game/script.rpy", line 570, in script call
+    scene black
+  File "game/days/dayONE.rpy", line 23, in script
+    moira "Ig, WAKE UP! I am not going to let you sleep at your desk on your first day as an overseer!
+  File "game/script.rpy", line 423, in execute
+    #Stressbar
+  File "game/script.rpy", line 423, in execute
+    #Stressbar
+  File "game/script.rpy", line 424, in execute
+    screen stressbar:
+  File "game/script.rpy", line 424, in keywords
+    screen stressbar:
+NameError: name 'none' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 558, in script call
-    call dayONE from _call_dayONE
-  File "game/choices/choices.rpy", line 59, in script
-    $increaseSouls(43)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "game/choices/choices.rpy", line 59, in <module>
-    $increaseSouls(43)
-  File "game/script.rpy", line 480, in increaseSouls
-    renpy.pause(0.01)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1480, in pause
-    rv = renpy.ui.interact(mouse='pause', type='pause', roll_forward=roll_forward)
+  File "game/script.rpy", line 570, in script call
+    scene black
+  File "game/days/dayONE.rpy", line 23, in script
+    moira "Ig, WAKE UP! I am not going to let you sleep at your desk on your first day as an overseer!
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "D:\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3130, in interact_core
-    renpy.audio.audio.interact()
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1107, in interact
-    periodic()
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
-    six.reraise(exc[0], exc[1], exc[2])
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
-    periodic_pass()
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 979, in periodic_pass
-    c.periodic()
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 457, in periodic
-    topf = load(self.file_prefix + filename + self.file_suffix)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 73, in load
-    rv = renpy.loader.load(fn)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\loader.py", line 576, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'audio/Failure.mp3'.
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
+    callback(self)
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
+    self.update()
+  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
+    self.screen.function(**self.scope)
+  File "game/script.rpy", line 423, in execute
+    #Stressbar
+  File "game/script.rpy", line 423, in execute
+    #Stressbar
+  File "game/script.rpy", line 424, in execute
+    screen stressbar:
+  File "game/script.rpy", line 424, in keywords
+    screen stressbar:
+  File "<screen language>", line 429, in <module>
+NameError: name 'none' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 STRELL 1.4
-Mon May 24 15:46:35 2021
+Wed Jun 02 18:17:20 2021
