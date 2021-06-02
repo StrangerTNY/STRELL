@@ -394,6 +394,7 @@ image imp:
 define audio.knock = "audio/knock1.mp3"
 define audio.crashing = "audio/crashing.mp3"
 define audio.timerrunout = "audio/Failure.mp3"
+define audio.choicesound = "audio/Good_Choice.wav"
 
 #Flags
 $ impStrike = False
