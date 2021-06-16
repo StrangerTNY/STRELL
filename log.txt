@@ -1,13 +1,13 @@
-Wed Jun 16 14:18:13 2021
+Wed Jun 16 18:06:35 2021
 Windows-10-10.0.19041
-Ren'Py 7.4.6.1693
+Ren'Py 7.4.4.1439
  
 
 Bootstrap to the start of init.init took 0.10s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.03s
-Loading script took 0.48s
+Loading script took 0.49s
 Loading save slot metadata. took 0.04s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -23,21 +23,21 @@ Initial gc. took 0.04s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.26s
+Creating interface object took 0.24s
 Cleaning stores took 0.00s
 Init translation took 0.06s
-Build styles took 0.01s
+Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
-Save screen analysis took 0.08s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.18s
+Save screen analysis took 0.07s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.19s
 Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.12s
 
-Initializing gl2 renderer:
+Initializing gl renderer:
 primary display bounds: (0, 0, 2560, 1440)
 swap interval: 1 frames
 Windowed mode.
@@ -45,190 +45,39 @@ Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 466.77'
 Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 32768
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
 Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 9.44558811188s
-
-Full traceback:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 205, in script
-    ignias "How come you know so much about the work of an Overseer?"
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1219, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 871, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3693, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 569, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3693, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/image.py", line 751, in per_interact
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/[ignias_mood].png': could not find image. (u'Ignias/SuprisedTalk/SuprisedTalk.png')
-
-While running game code:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 205, in script
-    ignias "How come you know so much about the work of an Overseer?"
-Exception: DynamicImage u'Ignias/[ignias_mood]/[ignias_mood].png': could not find image. (u'Ignias/SuprisedTalk/SuprisedTalk.png')
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 2.24100089073s
 Resetting cache.
-Bootstrap to the start of init.init took 55.81s
+Bootstrap to the start of init.init took 156.53s
 Early init took 0.00s
-Loader init took 0.03s
+Loader init took 0.02s
 Loading error handling took 0.02s
-Loading script took 0.16s
+Loading script took 0.28s
 Loading save slot metadata. took 0.04s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.05s
 Loading analysis data took 0.04s
-Analyze and compile ATL took 0.02s
-Index archives took 0.00s
-Dump and make backups. took 0.11s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.25s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.00s
-Load screen analysis took 0.13s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 57.0684790611s
-
-Full traceback:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 189, in script
-    moira "Lastly, even demons can feel the effect of overwork.
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1219, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 871, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3693, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 569, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3693, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/image.py", line 751, in per_interact
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF0.png': could not find image. (u'Ignias/MadTalk/BlinkF0.png')
-
-While running game code:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 189, in script
-    moira "Lastly, even demons can feel the effect of overwork.
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF0.png': could not find image. (u'Ignias/MadTalk/BlinkF0.png')
-Resetting cache.
-Bootstrap to the start of init.init took 58.91s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata. took 0.05s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.04s
-Loading analysis data took 0.05s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
-Dump and make backups. took 0.08s
+Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
+Dump and make backups. took 0.11s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.06s
@@ -238,64 +87,18 @@ nvdrs: Disabled thread optimizations.
 Creating interface object took 0.24s
 Cleaning stores took 0.00s
 Init translation took 0.06s
-Build styles took 0.01s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 60.0055961609s
-Resetting cache.
-Bootstrap to the start of init.init took 78.82s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.35s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
+Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
-Save screen analysis took 0.08s
+Save screen analysis took 0.07s
 Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.19s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.07s
 
-Initializing gl2 renderer:
+Initializing gl renderer:
 primary display bounds: (0, 0, 2560, 1440)
 swap interval: 1 frames
 Windowed mode.
@@ -303,117 +106,26 @@ Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 466.77'
 Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 32768
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
 Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 80.1755771637s
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 158.068011045s
 Resetting cache.
-Bootstrap to the start of init.init took 97.18s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.29s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.06s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.07s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 98.4626340866s
-
-Full traceback:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 205, in script
-    ignias "How come you know so much about the work of an Overseer?"
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1219, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 871, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3693, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 569, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3693, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/image.py", line 751, in per_interact
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/[ignias_mood].png': could not find image. (u'Ignias/SuprisedTalk/SuprisedTalk.png')
-
-While running game code:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 205, in script
-    ignias "How come you know so much about the work of an Overseer?"
-Exception: DynamicImage u'Ignias/[ignias_mood]/[ignias_mood].png': could not find image. (u'Ignias/SuprisedTalk/SuprisedTalk.png')
-Resetting cache.
-Bootstrap to the start of init.init took 133.74s
+Bootstrap to the start of init.init took 179.37s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.02s
@@ -426,7 +138,7 @@ Loading analysis data took 0.05s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
+Dump and make backups. took 0.12s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.06s
@@ -435,65 +147,19 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.23s
 Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.08s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 135.089576006s
-Resetting cache.
-Bootstrap to the start of init.init took 137.13s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.30s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.07s
+Init translation took 0.06s
 Build styles took 0.01s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.07s
 Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.19s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.08s
+Interface start took 0.07s
 
-Initializing gl2 renderer:
+Initializing gl renderer:
 primary display bounds: (0, 0, 2560, 1440)
 swap interval: 1 frames
 Windowed mode.
@@ -501,103 +167,26 @@ Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 466.77'
 Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 32768
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
 Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 138.454576015s
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 180.975009918s
 Resetting cache.
-Bootstrap to the start of init.init took 179.61s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.32s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.06s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.07s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 180.960572958s
-Resetting cache.
-Bootstrap to the start of init.init took 183.08s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.35s
-Loading save slot metadata. took 0.05s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
-Loading analysis data took 0.06s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.10s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.11s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.34s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.09s
-Prepare screens took 0.09s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.09s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 184.675071001s
-Resetting cache.
-Bootstrap to the start of init.init took 186.00s
+Bootstrap to the start of init.init took 181.08s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.02s
@@ -609,7 +198,7 @@ Running init code took 0.05s
 Loading analysis data took 0.05s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.09s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.06s
@@ -618,19 +207,19 @@ nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
 Creating interface object took 0.24s
 Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.14s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
+Init translation took 0.06s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.07s
 Prepare screens took 0.08s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.08s
 
-Initializing gl2 renderer:
+Initializing gl renderer:
 primary display bounds: (0, 0, 2560, 1440)
 swap interval: 1 frames
 Windowed mode.
@@ -638,77 +227,30 @@ Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 466.77'
 Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 32768
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
 Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 187.252071142s
-
-Full traceback:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 217, in script
-    narrator "Ignias still in a bit of disbelief over what his friend calls “public knowledge”"
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1219, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 871, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3693, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 569, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3693, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/image.py", line 751, in per_interact
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
-
-While running game code:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 217, in script
-    narrator "Ignias still in a bit of disbelief over what his friend calls “public knowledge”"
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 182.298509836s
 Resetting cache.
-Bootstrap to the start of init.init took 207.39s
+Bootstrap to the start of init.init took 182.72s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.02s
-Loading script took 0.30s
+Loading script took 0.28s
 Loading save slot metadata. took 0.04s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -717,28 +259,28 @@ Loading analysis data took 0.05s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.08s
+Dump and make backups. took 0.09s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.06s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
+Creating interface object took 0.26s
 Cleaning stores took 0.00s
 Init translation took 0.07s
 Build styles took 0.01s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
-Save screen analysis took 0.07s
+Save screen analysis took 0.08s
 Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.19s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.08s
+Interface start took 0.07s
 
-Initializing gl2 renderer:
+Initializing gl renderer:
 primary display bounds: (0, 0, 2560, 1440)
 swap interval: 1 frames
 Windowed mode.
@@ -746,11 +288,26 @@ Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 466.77'
 Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 32768
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
 Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 208.701296091s
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 184.243510962s
 Resetting cache.
-Bootstrap to the start of init.init took 229.85s
+Bootstrap to the start of init.init took 184.50s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.02s
@@ -759,219 +316,6 @@ Loading save slot metadata. took 0.04s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.08s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 231.157212973s
-
-Full traceback:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 189, in script
-    moira "Lastly, even demons can feel the effect of overwork.
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1219, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 871, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3693, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 569, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3693, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/image.py", line 751, in per_interact
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF0.png': could not find image. (u'Ignias/MadTalk/BlinkF0.png')
-
-While running game code:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 189, in script
-    moira "Lastly, even demons can feel the effect of overwork.
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF0.png': could not find image. (u'Ignias/MadTalk/BlinkF0.png')
-Resetting cache.
-Bootstrap to the start of init.init took 233.64s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.17s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.08s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.13s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.09s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 234.886913061s
-
-Full traceback:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 205, in script
-    ignias "How come you know so much about the work of an Overseer?"
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1219, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 871, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3693, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 569, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3693, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/image.py", line 751, in per_interact
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/[ignias_mood].png': could not find image. (u'Ignias/SuprisedTalk/SuprisedTalk.png')
-
-While running game code:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 205, in script
-    ignias "How come you know so much about the work of an Overseer?"
-Exception: DynamicImage u'Ignias/[ignias_mood]/[ignias_mood].png': could not find image. (u'Ignias/SuprisedTalk/SuprisedTalk.png')
-Resetting cache.
-Bootstrap to the start of init.init took 264.17s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.03s
-Loading script took 0.35s
-Loading save slot metadata. took 0.05s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
 Loading analysis data took 0.05s
 Analyze and compile ATL took 0.01s
 Index archives took 0.00s
@@ -991,13 +335,13 @@ Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.08s
 Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.21s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.08s
+Interface start took 0.07s
 
-Initializing gl2 renderer:
+Initializing gl renderer:
 primary display bounds: (0, 0, 2560, 1440)
 swap interval: 1 frames
 Windowed mode.
@@ -1005,77 +349,91 @@ Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 466.77'
 Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 32768
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
 Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 265.62144804s
-
-Full traceback:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 210, in script
-    moira "Honey, I have been around these parts a lot longer than you and over the years picked up some knowledge.
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1219, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 871, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3693, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 569, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3693, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/image.py", line 751, in per_interact
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF0.png': could not find image. (u'Ignias/MadTalk/BlinkF0.png')
-
-While running game code:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 210, in script
-    moira "Honey, I have been around these parts a lot longer than you and over the years picked up some knowledge.
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF0.png': could not find image. (u'Ignias/MadTalk/BlinkF0.png')
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 186.072510958s
 Resetting cache.
-Bootstrap to the start of init.init took 269.08s
+Bootstrap to the start of init.init took 186.23s
 Early init took 0.00s
 Loader init took 0.02s
 Loading error handling took 0.02s
-Loading script took 0.17s
+Loading script took 0.28s
+Loading save slot metadata. took 0.04s
+Loading persistent took 0.00s
+Importing _renpysteam: ImportError('No module named _renpysteam',)
+Running init code took 0.05s
+Loading analysis data took 0.05s
+Analyze and compile ATL took 0.01s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
+Dump and make backups. took 0.09s
+Cleaning cache took 0.00s
+Making clean stores took 0.00s
+Initial gc. took 0.06s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: Disabled thread optimizations.
+Creating interface object took 0.24s
+Cleaning stores took 0.00s
+Init translation took 0.07s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.08s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.20s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start took 0.07s
+
+Initializing gl renderer:
+primary display bounds: (0, 0, 2560, 1440)
+swap interval: 1 frames
+Windowed mode.
+Vendor: 'NVIDIA Corporation'
+Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 466.77'
+Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 32768
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
+Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 187.733011007s
+Resetting cache.
+Bootstrap to the start of init.init took 190.78s
+Early init took 0.00s
+Loader init took 0.02s
+Loading error handling took 0.02s
+Loading script took 0.18s
 Loading save slot metadata. took 0.04s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
@@ -1086,15 +444,15 @@ Index archives took 0.00s
 Dump and make backups. took 0.08s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.06s
+Initial gc. took 0.07s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
+Creating interface object took 0.25s
 Cleaning stores took 0.00s
 Init translation took 0.07s
 Build styles took 0.01s
-Load screen analysis took 0.13s
+Load screen analysis took 0.16s
 Analyze screens took 0.00s
 Save screen analysis took 0.00s
 Prepare screens took 0.08s
@@ -1104,7 +462,7 @@ Running _start took 0.00s
 Performance test:
 Interface start took 0.08s
 
-Initializing gl2 renderer:
+Initializing gl renderer:
 primary display bounds: (0, 0, 2560, 1440)
 swap interval: 1 frames
 Windowed mode.
@@ -1112,452 +470,21 @@ Vendor: 'NVIDIA Corporation'
 Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 466.77'
 Display Info: None
+Number of texture units: 32
+Using shader environment.
+Using FBO RTT.
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Using gl renderer.
+Texture testing:
+- Hardware max texture size: 32768
+- 64px textures work.
+- 128px textures work.
+- 256px textures work.
+- 512px textures work.
+- 1024px textures work.
+- 2048px textures work.
 Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 270.32745409s
-
-Full traceback:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 235, in script
-    narrator "Ignias glances over at Moira, who is reading a different scroll"
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1219, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 871, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3693, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 569, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3693, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/image.py", line 751, in per_interact
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
-
-While running game code:
-  File "game/script.rpy", line 732, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 235, in script
-    narrator "Ignias glances over at Moira, who is reading a different scroll"
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
-Resetting cache.
-Bootstrap to the start of init.init took 409.55s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.30s
-Loading save slot metadata. took 0.05s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.10s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.08s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 410.915178061s
-Resetting cache.
-Bootstrap to the start of init.init took 456.57s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.31s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.07s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.18s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.07s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 458.089014053s
-Resetting cache.
-Bootstrap to the start of init.init took 514.07s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.34s
-Loading save slot metadata. took 0.05s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.07s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 515.460543156s
-
-Full traceback:
-  File "game/script.rpy", line 733, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 235, in script
-    narrator "Ignias glances over at Moira, who is reading a different scroll"
-  File "renpy/ast.py", line 715, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "renpy/exports.py", line 1417, in say
-    who(what, *args, **kwargs)
-  File "renpy/character.py", line 1219, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "renpy/character.py", line 871, in do_display
-    **display_args)
-  File "renpy/character.py", line 621, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3276, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3693, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 567, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 569, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3693, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/image.py", line 751, in per_interact
-    self.find_target()
-  File "renpy/display/image.py", line 652, in find_target
-    raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
-
-While running game code:
-  File "game/script.rpy", line 733, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 235, in script
-    narrator "Ignias glances over at Moira, who is reading a different scroll"
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
-Resetting cache.
-Bootstrap to the start of init.init took 555.06s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.30s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.24s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.08s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.10s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 556.411027193s
-Resetting cache.
-Bootstrap to the start of init.init took 594.57s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.30s
-Loading save slot metadata. took 0.05s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.25s
-Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.07s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 595.91072011s
-Resetting cache.
-Bootstrap to the start of init.init took 597.93s
-Early init took 0.00s
-Loader init took 0.02s
-Loading error handling took 0.02s
-Loading script took 0.30s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.11s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.07s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.28s
-Cleaning stores took 0.00s
-Init translation took 0.08s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.08s
-Prepare screens took 0.09s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 599.351716042s
-Resetting cache.
-Bootstrap to the start of init.init took 599.99s
-Early init took 0.00s
-Loader init took 0.03s
-Loading error handling took 0.02s
-Loading script took 0.32s
-Loading save slot metadata. took 0.04s
-Loading persistent took 0.00s
-Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.05s
-Loading analysis data took 0.05s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\tonym\\AppData\\Roaming/RenPy/backups\\STRELL':
-Dump and make backups. took 0.09s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.06s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: Disabled thread optimizations.
-Creating interface object took 0.23s
-Cleaning stores took 0.00s
-Init translation took 0.07s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.07s
-Prepare screens took 0.08s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.08s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 2560, 1440)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'NVIDIA Corporation'
-Renderer: 'NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 466.77'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1284, 722) drawable=(1284, 722)
-Maximum texture size: 4096x4096
-Total time until interface ready: 601.31121707s
+Root FBO is: 0
+FBO Maximum Texture Size: 2048
+Total time until interface ready: 192.084306955s

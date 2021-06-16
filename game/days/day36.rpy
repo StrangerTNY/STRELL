@@ -91,8 +91,8 @@ label overheatflag:
     hide ignias
     hide imp
     with dissolve
-    $ time = 4
-    $ timer_range = 4
+    $ time = 7.5
+    $ timer_range = 7.5
     $ timer_jump = 'standstill'
 
     narrator "The soul extraction vats are overheating, how do you deal with it? \n
@@ -189,8 +189,8 @@ label sabotageflag:
     hide ignias
     hide moira
     with dissolve
-    $ time = 4
-    $ timer_range = 4
+    $ time = 7.5
+    $ timer_range = 7.5
     $ timer_jump = 'workextra'
 
     narrator "A soul extraction vat is damaged, how do you deal with it? \n
@@ -253,8 +253,8 @@ label heavensouls:
     hide ignias
     hide moira
     with dissolve
-    $ time = 4
-    $ timer_range = 4
+    $ time = 7.5
+    $ timer_range = 7.5
     $ timer_jump = 'keepsouls'
 
     narrator "How do you fare with the illegally acquired souls? \n
@@ -340,8 +340,8 @@ label lucifersouls:
     hide ignias
     hide moira
     with dissolve
-    $ time = 4
-    $ timer_range = 4
+    $ time = 7.5
+    $ timer_range = 7.5
     $ timer_jump = 'corrupt'
 
     narrator "Lucifer wants specific souls; how do you get them for him? \n
@@ -407,8 +407,8 @@ label hellhoundescape:
     hide ignias
     hide imp
     with dissolve
-    $ time = 4
-    $ timer_range = 4
+    $ time = 7.5
+    $ timer_range = 7.5
     $ timer_jump = 'askmoira'
 
     narrator "Your hellhound has broken loose, how do you contain the situation? \n

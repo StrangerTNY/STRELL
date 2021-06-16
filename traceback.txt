@@ -1,19 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 733, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 235, in script
-    narrator "Ignias glances over at Moira, who is reading a different scroll"
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
+  File "game/script.rpy", line 736, in script call
+    call dayONE
+  File "game/days/dayONE.rpy", line 189, in script
+    moira "Lastly, even demons can feel the effect of overwork.
+Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF0.png': could not find image. (u'Ignias/MadTalk/BlinkF0.png')
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 733, in script call
-    call dayONE from _call_dayONE
-  File "game/days/dayONE.rpy", line 235, in script
-    narrator "Ignias glances over at Moira, who is reading a different scroll"
+  File "game/script.rpy", line 736, in script call
+    call dayONE
+  File "game/days/dayONE.rpy", line 189, in script
+    moira "Lastly, even demons can feel the effect of overwork.
   File "renpy/ast.py", line 715, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "renpy/exports.py", line 1417, in say
@@ -62,9 +62,9 @@ Full traceback:
     self.find_target()
   File "renpy/display/image.py", line 652, in find_target
     raise Exception(error)
-Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
+Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF0.png': could not find image. (u'Ignias/MadTalk/BlinkF0.png')
 
 Windows-10-10.0.19041
 Ren'Py 7.4.6.1693
 STRELL 1.4
-Wed Jun 16 14:26:50 2021
+Wed Jun 16 14:50:07 2021

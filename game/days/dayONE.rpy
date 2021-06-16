@@ -199,7 +199,7 @@ label dayONE:
     hide screen stressbar with dissolve
     pause 0.1
     show screen stressbar with dissolve
-    #$ignias_mood = "SuprisedTalk"
+    $ignias_mood = "SuprisedTalk"
     play sound "audio/Ignias/curious1.mp3"
 
     ignias "How come you know so much about the work of an Overseer?"
@@ -276,11 +276,17 @@ label dayONE:
             #+souls, +stress setFlag: Soul vats overheating
 
 
-    # NEXT EVENT Imps want more to do
-label ImpasWantMore:
+#MINIGAME
+label minigame:
     #Minigame Test
     $ minigame_jump = 'ImpasWantMore'
-    call screen minigame
+    play minigame "audio/Minigame.mp3"
+    call screen minigame 
+
+# NEXT EVENT Imps want more to do
+label ImpasWantMore:
+    stop minigame
+    play music "audio/myuu-dark-creature.mp3" loop
 
     narrator "Ignias works on his own for a bit, before succumbing to an overly long break"
     hide screen soulbar
@@ -357,8 +363,8 @@ label ImpasWantMore:
     hide ignias
     hide moira
     with dissolve
-    $ time = 4
-    $ timer_range = 4
+    $ time = 7.5
+    $ timer_range = 7.5
     $ timer_jump = 'keepbusy'
 
     narrator "Some imps are getting restless, how do you keep them busy? \n
@@ -488,8 +494,8 @@ label infestation:
     hide ignias
     hide moira
     with dissolve
-    $ time = 4
-    $ timer_range = 4
+    $ time = 7.5
+    $ timer_range = 7.5
     $ timer_jump = 'relocate'
 
     narrator "Hellmoths are feeding on the soul extraction efforts, how do you deal with them? \n
@@ -576,8 +582,8 @@ label competition:
     hide ignias
     hide moira
     with dissolve
-    $ time = 4
-    $ timer_range = 4
+    $ time = 7.5
+    $ timer_range = 7.5
     $ timer_jump = 'goig'
 
     narrator "A colleague has offered to chip in with your first delivery, how do you want to retrieve it? \n

@@ -50,7 +50,7 @@ label impshift:
 
     hide moira with moveoutright
     hide ignias with dissolve
-    jump ImpasWantMore
+    jump minigame
 
 label equipment:
     #VARIABLES
@@ -83,7 +83,7 @@ label equipment:
     hide ignias
     hide moira
     with dissolve
-    jump ImpasWantMore
+    jump minigame
 
     #CHOICES EVENT 2
 label workload:

@@ -486,31 +486,37 @@ init python:
         if(drags[0].drag_name == "Ignias1"):
             drags[0].draggable = False
             drags[0].droppable = True
-            counter += 1
-        elif(drags[0].drag_name == "Ignias22"):
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Ignias2"):
             drags[0].draggable = False
             drags[0].droppable = True
-            counter += 1
+            drags[0].bottom()
+            countermg += 1
         elif(drags[0].drag_name == "Imp1"):
             drags[0].draggable = False
             drags[0].droppable = True
-            counter += 1
+            drags[0].bottom()
+            countermg += 1
         elif(drags[0].drag_name == "Imp2"):
             drags[0].draggable = False
             drags[0].droppable = True
-            counter += 1
+            drags[0].bottom()
+            countermg += 1
         elif(drags[0].drag_name == "Lucifer1"):
             drags[0].draggable = False
             drags[0].droppable = True
-            counter += 1
+            drags[0].bottom()
+            countermg += 1
         elif(drags[0].drag_name == "Lucifer2"):
             drags[0].draggable = False
             drags[0].droppable = True
-            counter += 1
+            drags[0].bottom()
+            countermg += 1
         else:
             return
 
-        if counter == 6:
+        if countermg == 6:
             return True
         else:
             return
@@ -521,11 +527,11 @@ screen minigame:
     add "/Minigame/MinigameBG.jpg"
     zorder 99
     frame:
-        xalign 0.1
-        yalign 0.1
-        add DynamicDisplayable(countdown, length=10)
-    
-    $ ui.timer(12.0, ui.jumps(minigame_jump)) #Label to jump to after countdown ends
+        xalign 0.95
+        yalign 0.05
+        add DynamicDisplayable(countdownmg, length=31)
+   
+    $ ui.timer(33.0, ui.jumps(minigame_jump)) #Label to jump to after countdown ends
 
     draggroup:
         #Where the Paper needs to be on IGNIAS
@@ -616,6 +622,7 @@ init:
     #Custom Music Channels
     $renpy.music.register_channel("soundMoi", mixer ="voice", loop = False)
     $renpy.music.register_channel("timer", mixer ="music", loop = False)
+    $renpy.music.register_channel("minigame", mixer ="music", loop = False)
     
     #Custom Image effect
     transform flip:
@@ -684,7 +691,7 @@ init:
                 renpy.pause(0.01)
 
         #Countdown for Minigame
-        def countdown(st, at, length=0.0):
+        def countdownmg(st, at, length=0.0):
 
             remaining = length - st
 
@@ -695,7 +702,7 @@ init:
             else:
                 return anim.Blink(Text("0.0", color="#f00", size=72)), None
     # Show a countdown for 10 seconds. for Minigame
-    image countdown = DynamicDisplayable(countdown, length=5.0)
+    image countdownmg = DynamicDisplayable(countdownmg, length=5.0)
     
 
 transform alpha_dissolve:
@@ -704,11 +711,6 @@ transform alpha_dissolve:
     on hide:
         linear 0.5 alpha 0
     # This is to fade the bar in and out, and is only required once in your script
-
-
-    
-
-
 
 
 
