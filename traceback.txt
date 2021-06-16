@@ -1,69 +1,70 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 570, in script call
-    scene black
-  File "game/days/dayONE.rpy", line 23, in script
-    moira "Ig, WAKE UP! I am not going to let you sleep at your desk on your first day as an overseer!
-  File "game/script.rpy", line 423, in execute
-    #Stressbar
-  File "game/script.rpy", line 423, in execute
-    #Stressbar
-  File "game/script.rpy", line 424, in execute
-    screen stressbar:
-  File "game/script.rpy", line 424, in keywords
-    screen stressbar:
-NameError: name 'none' is not defined
+  File "game/script.rpy", line 733, in script call
+    call dayONE from _call_dayONE
+  File "game/days/dayONE.rpy", line 235, in script
+    narrator "Ignias glances over at Moira, who is reading a different scroll"
+Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 570, in script call
-    scene black
-  File "game/days/dayONE.rpy", line 23, in script
-    moira "Ig, WAKE UP! I am not going to let you sleep at your desk on your first day as an overseer!
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
+  File "game/script.rpy", line 733, in script call
+    call dayONE from _call_dayONE
+  File "game/days/dayONE.rpy", line 235, in script
+    narrator "Ignias glances over at Moira, who is reading a different scroll"
+  File "renpy/ast.py", line 715, in execute
     renpy.exports.say(who, what, *args, **kwargs)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
+  File "renpy/exports.py", line 1417, in say
     who(what, *args, **kwargs)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
+  File "renpy/character.py", line 1219, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "renpy/character.py", line 871, in do_display
     **display_args)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
+  File "renpy/character.py", line 621, in display_say
     rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+  File "renpy/ui.py", line 298, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in interact_core
+  File "renpy/display/core.py", line 3276, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "renpy/display/core.py", line 3693, in interact_core
     root_widget.visit_all(lambda i : i.per_interact())
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+  File "renpy/display/core.py", line 567, in visit_all
     d.visit_all(callback, seen)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+  File "renpy/display/core.py", line 567, in visit_all
     d.visit_all(callback, seen)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 541, in visit_all
+  File "renpy/display/core.py", line 567, in visit_all
     d.visit_all(callback, seen)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 430, in visit_all
+  File "renpy/display/core.py", line 567, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 567, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 567, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 567, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 567, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 567, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 567, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 567, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 567, in visit_all
+    d.visit_all(callback, seen)
+  File "renpy/display/core.py", line 569, in visit_all
     callback(self)
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\core.py", line 3094, in <lambda>
+  File "renpy/display/core.py", line 3693, in <lambda>
     root_widget.visit_all(lambda i : i.per_interact())
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 440, in per_interact
-    self.update()
-  File "D:\Renpy\renpy-7.3.5-sdk\renpy\display\screen.py", line 625, in update
-    self.screen.function(**self.scope)
-  File "game/script.rpy", line 423, in execute
-    #Stressbar
-  File "game/script.rpy", line 423, in execute
-    #Stressbar
-  File "game/script.rpy", line 424, in execute
-    screen stressbar:
-  File "game/script.rpy", line 424, in keywords
-    screen stressbar:
-  File "<screen language>", line 429, in <module>
-NameError: name 'none' is not defined
+  File "renpy/display/image.py", line 751, in per_interact
+    self.find_target()
+  File "renpy/display/image.py", line 652, in find_target
+    raise Exception(error)
+Exception: DynamicImage u'Ignias/[ignias_mood]/BlinkF3.png': could not find image. (u'Ignias/DefaultTalk/BlinkF3.png')
 
-Windows-8-6.2.9200
-Ren'Py 7.3.5.606
+Windows-10-10.0.19041
+Ren'Py 7.4.6.1693
 STRELL 1.4
-Wed Jun 02 18:17:20 2021
+Wed Jun 16 14:26:50 2021

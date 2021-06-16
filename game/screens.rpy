@@ -364,9 +364,9 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
     add Movie(size=(1920, 1080))
-    on "show" action Play("movie", "gui/main_menu_video.ogv", loop=True)
+    on "show" action Play("movie", "gui/StrellTitleScreen.ogv", loop=True)
     on "hide" action Stop("movie")
-    on "replace" action Play("movie", "gui/main_menu_video.ogv", loop=True)
+    on "replace" action Play("movie", "gui/StrellTitleScreen.ogv", loop=True)
     on "replaced" action Stop("movie")
 
     style_prefix "main_menu"

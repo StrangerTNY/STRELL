@@ -469,67 +469,234 @@ screen impeachmentbar:
         #thumb "_theme_regal/revslider_thumb.png"
         thumb_shadow None
 
-#Increase Bar function
+#Decision Countdown
+screen countdown:
+    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+    bar value time range timer_range xalign 0.5 yalign 0.5 xmaximum 300 at alpha_dissolve # This is the timer bar.
+
+default countermg = 0
+
 init python:
-    def increaseStress(val):
-        global stress
-        global counter
-        counter = 0
-        while counter < val:
-            if(stress < 0 or stress > 100):
-                renpy.jump("gameover")
-            stress += 1
+    def minigamecallback (drags,drop):    
+        global countermg
+
+        if not drop:
+            return
+
+        if(drags[0].drag_name == "Ignias1"):
+            drags[0].draggable = False
+            drags[0].droppable = True
             counter += 1
-            renpy.pause(0.01)
-    def increaseSouls(val):
-        global souls
-        global counter
-        counter = 0
-        while counter < val:
-            #if(souls < 0 or souls > 100):
-            #    renpy.jump("gameover")
-            souls += 1
+        elif(drags[0].drag_name == "Ignias22"):
+            drags[0].draggable = False
+            drags[0].droppable = True
             counter += 1
-            renpy.pause(0.01)
-    def increaseImpeachment(val):
-        global impeachment
-        global counter
-        counter = 0
-        while counter < val:
-            #if(impeachment < 0 or impeachment > 100):
-            #    renpy.jump("gameover")
-            impeachment += 1
+        elif(drags[0].drag_name == "Imp1"):
+            drags[0].draggable = False
+            drags[0].droppable = True
             counter += 1
-            renpy.pause(0.01)
-    def decreaseStress(val):
-        global stress
-        global counter
-        while counter < val:
-            #if(stress < 0 or stress > 100):
-            #    renpy.jump("gameover")
-            stress -= 1
+        elif(drags[0].drag_name == "Imp2"):
+            drags[0].draggable = False
+            drags[0].droppable = True
             counter += 1
-            renpy.pause(0.01)
-    def decreaseSouls(val):
-        global souls
-        global counter
-        counter = 0
-        while counter < val:
-            #if(souls < 0 or souls > 100):
-            #    renpy.jump("gameover")
-            souls -= 1
+        elif(drags[0].drag_name == "Lucifer1"):
+            drags[0].draggable = False
+            drags[0].droppable = True
             counter += 1
-            renpy.pause(0.01)
-    def decreaseImpeachment(val):
-        global impeachment
-        global counter
-        counter = 0
-        while counter < val:
-            #if(impeachment < 0 or impeachment > 100):
-            #    renpy.jump("gameover")
-            impeachment -= 1
+        elif(drags[0].drag_name == "Lucifer2"):
+            drags[0].draggable = False
+            drags[0].droppable = True
             counter += 1
-            renpy.pause(0.01)
+        else:
+            return
+
+        if counter == 6:
+            return True
+        else:
+            return
+
+        
+screen minigame:
+    # A map as background.
+    add "/Minigame/MinigameBG.jpg"
+    zorder 99
+    frame:
+        xalign 0.1
+        yalign 0.1
+        add DynamicDisplayable(countdown, length=10)
+    
+    $ ui.timer(12.0, ui.jumps(minigame_jump)) #Label to jump to after countdown ends
+
+    draggroup:
+        #Where the Paper needs to be on IGNIAS
+        drag:
+            drag_name "IgniasDeck"
+            child "/Minigame/AblageIgnias.png"
+            droppable True
+            draggable False
+            xpos 900 ypos 140
+
+        drag:
+            drag_name "Ignias1"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 920 ypos 600
+        
+        drag:
+            drag_name "Ignias2"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 950 ypos 600
+    
+
+    draggroup:
+        #Where the Paper needs to be on IMPS
+        drag:
+            drag_name "ImpDeck"
+            child "/Minigame/AblageImps.png"
+            droppable True
+            draggable False
+            xpos 500 ypos 140
+
+        drag:
+            drag_name "Imp1"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 530 ypos 600
+
+        drag:
+            drag_name "Imp2"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 560 ypos 600
+
+    draggroup:
+        #Where the Paper needs to be on LUCIFER
+        drag:
+            drag_name "LuciferDeck"
+            child "/Minigame/AblageLucifer.png"
+            droppable True
+            draggable False
+            xpos 100 ypos 140
+
+        drag:
+            drag_name "Lucifer1"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 100 ypos 600
+
+        drag:
+            drag_name "Lucifer2"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 130 ypos 600
+
+
+#Initializing all flags functions etc.
+init:
+    
+
+    #Variablse for Decision Timer
+    $ timer_range = 0
+    $ timer_jump = 0
+    $ minigame_jump = 0
+
+    #Custom Music Channels
+    $renpy.music.register_channel("soundMoi", mixer ="voice", loop = False)
+    $renpy.music.register_channel("timer", mixer ="music", loop = False)
+    
+    #Custom Image effect
+    transform flip:
+        xzoom -1.0
+
+    python:
+        #Bar functions
+        def increaseStress(val):
+            global stress
+            global counter
+            counter = 0
+            while counter < val:
+                if(stress < 0 or stress > 100):
+                    renpy.jump("gameover")
+                stress += 1
+                counter += 1
+                renpy.pause(0.01)
+        def increaseSouls(val):
+            global souls
+            global counter
+            counter = 0
+            while counter < val:
+                #if(souls < 0 or souls > 100):
+                #    renpy.jump("gameover")
+                souls += 1
+                counter += 1
+                renpy.pause(0.01)
+        def increaseImpeachment(val):
+            global impeachment
+            global counter
+            counter = 0
+            while counter < val:
+                #if(impeachment < 0 or impeachment > 100):
+                #    renpy.jump("gameover")
+                impeachment += 1
+                counter += 1
+                renpy.pause(0.01)
+        def decreaseStress(val):
+            global stress
+            global counter
+            while counter < val:
+                #if(stress < 0 or stress > 100):
+                #    renpy.jump("gameover")
+                stress -= 1
+                counter += 1
+                renpy.pause(0.01)
+        def decreaseSouls(val):
+            global souls
+            global counter
+            counter = 0
+            while counter < val:
+                #if(souls < 0 or souls > 100):
+                #    renpy.jump("gameover")
+                souls -= 1
+                counter += 1
+                renpy.pause(0.01)
+        def decreaseImpeachment(val):
+            global impeachment
+            global counter
+            counter = 0
+            while counter < val:
+                #if(impeachment < 0 or impeachment > 100):
+                #    renpy.jump("gameover")
+                impeachment -= 1
+                counter += 1
+                renpy.pause(0.01)
+
+        #Countdown for Minigame
+        def countdown(st, at, length=0.0):
+
+            remaining = length - st
+
+            if remaining > 2.0:
+                return Text("%.1f" % remaining, color="#fff", size=72), .1
+            elif remaining > 0.0:
+                return Text("%.1f" % remaining, color="#f00", size=72), .1
+            else:
+                return anim.Blink(Text("0.0", color="#f00", size=72)), None
+    # Show a countdown for 10 seconds. for Minigame
+    image countdown = DynamicDisplayable(countdown, length=5.0)
+    
 
 transform alpha_dissolve:
     alpha 0.0
@@ -538,17 +705,11 @@ transform alpha_dissolve:
         linear 0.5 alpha 0
     # This is to fade the bar in and out, and is only required once in your script
 
-screen countdown:
-    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
-    bar value time range timer_range xalign 0.5 yalign 0.5 xmaximum 300 at alpha_dissolve # This is the timer bar.
+
     
-init:
-    $ timer_range = 0
-    $ timer_jump = 0
-    $renpy.music.register_channel("soundMoi", mixer ="voice", loop = False)
-    $renpy.music.register_channel("timer", mixer ="music", loop = False)
-    transform flip:
-        xzoom -1.0
+
+
+
 
 
 #{i}{/i}
@@ -562,14 +723,14 @@ label start:
 
     #Start of the Game
         #Start Day One
-    call callDay from _call_callDay
+    call callDay 
     scene bgHell
     show screen baroverlay
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
     with fade
-    call dayONE from _call_dayONE
+    call dayONE 
 
     #End Day 1
     hide ignias
@@ -582,14 +743,14 @@ label start:
 
     #Start Day 36
     $ souls = 0
-    call callDay2 from _call_callDay2
+    call callDay2 
     scene bgHell
     show screen baroverlay
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
     with fade
-    call day36 from _call_day36
+    call day36
 
 
 

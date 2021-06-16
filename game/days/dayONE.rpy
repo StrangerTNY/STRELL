@@ -199,7 +199,7 @@ label dayONE:
     hide screen stressbar with dissolve
     pause 0.1
     show screen stressbar with dissolve
-    $ignias_mood = "SuprisedTalk"
+    #$ignias_mood = "SuprisedTalk"
     play sound "audio/Ignias/curious1.mp3"
 
     ignias "How come you know so much about the work of an Overseer?"
@@ -278,6 +278,10 @@ label dayONE:
 
     # NEXT EVENT Imps want more to do
 label ImpasWantMore:
+    #Minigame Test
+    $ minigame_jump = 'ImpasWantMore'
+    call screen minigame
+
     narrator "Ignias works on his own for a bit, before succumbing to an overly long break"
     hide screen soulbar
     hide screen stressbar
