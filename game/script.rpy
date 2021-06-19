@@ -446,6 +446,160 @@ image qoe:
     )
     zoom 0.78
 
+#GATEKEEPER TWINS
+default twins_mood = "Default" #Moods: Default, DefaultTalk, Happy, Mad, Suprised
+
+image twins Default:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins DefaultTalk:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins Happy:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins Mad:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins Suprised:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins:
+    LiveComposite(
+    (710,1000), #(width, height)
+    (0,0), ConditionSwitch(
+    "twins_mood == 'Default'", "twins Default",
+    "twins_mood == 'DefaultTalk'", "twins DefaultTalk",
+    "twins_mood == 'Happy'", "twins Happy",
+    "twins_mood == 'Mad'", "twins Mad",
+    "twins_mood == 'Suprised'", "twins Suprised",
+    )
+    zoom 0.78
+
+#CERBERUS
+
+default cerberus_mood = "Default" #Moods: Default Happy 
+
+image cerberus Default:
+    "Cerberus/[cerberus_mood]/Blink0.png"
+    1.5
+    "Cerberus/[cerberus_mood]/Blink1.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink2.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink3.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink4.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink0.png"
+    1.5
+    repeat
+
+image cerberus Happy:
+    "Cerberus/[cerberus_mood]/Blink0.png"
+    1.5
+    "Cerberus/[cerberus_mood]/Blink1.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink2.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink3.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink4.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink0.png"
+    1.5
+    repeat
+
+image cerberus:
+    LiveComposite(
+    (1040,1200), #(width, height)
+    (0,0), ConditionSwitch(
+    "cerberus_mood == 'Default'", "cerberus Default",
+    "cerberus_mood == 'Happy'","cerberus Happy",)
+    )
+    zoom 0.78
+
+
 #AUDIO
 define audio.knock = "audio/knock1.mp3"
 define audio.crashing = "audio/crashing.mp3"
