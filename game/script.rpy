@@ -11,11 +11,14 @@ define ignias = Character("Ignias", who_color="#B29782")
 define moira = Character("Moira", who_color="#c285e0")
 define imp = Character("Imp")
 define lucifer = Character("Lucifer")
+define twins = Character("Gatekeepers")
+define qoe = Character ("Queen of Eyes")
 
 #IMAGES
 image bgHell = im.Scale("OfficeBG.jpg", 1920, 1080)
 image Hallway = im.Scale("HallwayBG.jpg", 1920, 1080)
 image ThroneRoom = im.Scale("ThroneRoomBG.jpg", 1920, 1080)
+image cerbcell = im.Scale("Dungeon.jpg", 1920, 1080)
 image lucifer :
      im.Scale("Boss.png",989,1194)
 
@@ -32,7 +35,7 @@ image loadscreen = Movie(play = "LoadinScreenNoLoop.mp4")
 
 #Animated Characterstates
 
-    #IGNIAS
+#IGNIAS
 default ignias_mood = "Default" #Moods: Default, DefaultTalk, Happy, Mad, MadTalk, Sad, SadTalk, Suprised, SuprisedTalk
 
 image ignias Default:
@@ -203,7 +206,7 @@ image ignias:
     )
     zoom 0.78
 
-    #MOIRA
+#MOIRA
 default moira_mood = "Default" #Moods: Default, DefaultTalk, Happy, Mad, MadTalk, Sad, SadTalk, Suprised, SuprisedTalk
 
 image moira Default:
@@ -387,6 +390,59 @@ image imp:
     (0,0), ConditionSwitch(
     "imp_mood == 'Default'", "imp Default",
     "imp_mood == 'Mad'", "imp Mad",)
+    )
+    zoom 0.78
+
+#Queen of Eyes
+
+default qoe_mood = "Default" #Moods: Default Happy Mad
+
+image qoe Default:
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink2.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    repeat
+
+image qoe Happy:
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink2.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    repeat
+
+image qoe Mad:
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink2.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    repeat
+
+image qoe:
+    LiveComposite(
+    (980,1200), #(width, height)
+    (0,0), ConditionSwitch(
+    "qoe_mood == 'Default'", "qoe Default",
+    "qoe_mood == 'Mad'", "qoe Mad",
+    "qoe_mood == 'Happy'","qoe Happy",)
     )
     zoom 0.78
 

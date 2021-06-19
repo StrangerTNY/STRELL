@@ -276,17 +276,10 @@ label dayONE:
             #+souls, +stress setFlag: Soul vats overheating
 
 
-#MINIGAME
-label minigame:
-    #Minigame Test
-    $ minigame_jump = 'ImpasWantMore'
-    play minigame "audio/Minigame.mp3"
-    call screen minigame 
 
 # NEXT EVENT Imps want more to do
 label ImpasWantMore:
-    stop minigame
-    play music "audio/myuu-dark-creature.mp3" loop
+    
 
     narrator "Ignias works on his own for a bit, before succumbing to an overly long break"
     hide screen soulbar
@@ -382,9 +375,18 @@ label ImpasWantMore:
             jump keepbusy
             # + stress
 
+#MINIGAME
+label minigame:
+    #Minigame Test
+    $ minigame_jump = 'infestation'
+    play minigame "audio/Minigame.mp3"
+    call screen minigame 
 
     # NEXT EVENT
 label infestation:
+    stop minigame
+    play music "audio/myuu-dark-creature.mp3" loop
+
     narrator "They both resume reading through the sheer endless amount of records"
     hide screen soulbar
     hide screen stressbar

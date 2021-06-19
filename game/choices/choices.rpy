@@ -50,7 +50,7 @@ label impshift:
 
     hide moira with moveoutright
     hide ignias with dissolve
-    jump minigame
+    jump ImpasWantMore
 
 label equipment:
     #VARIABLES
@@ -83,7 +83,7 @@ label equipment:
     hide ignias
     hide moira
     with dissolve
-    jump minigame
+    jump ImpasWantMore
 
     #CHOICES EVENT 2
 label workload:
@@ -101,7 +101,7 @@ label workload:
     play sound "audio/Imp/ImpAnnoyed.mp3"
     hide imp with moveoutright
     show moira at right with dissolve
-    jump infestation
+    jump minigame
 
 label keepbusy:
     $increaseStress(10.84)
@@ -118,7 +118,7 @@ label keepbusy:
     hide imp with moveoutright
     show moira at right with dissolve
 
-    jump infestation
+    jump minigame
 
     #CHOICES EVENT 3
 label pesticide:
