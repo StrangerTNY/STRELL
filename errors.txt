@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1004: is not terminated with a newline. (Check strings and parenthesis.)
-        credits = ('Backgrounds', 'Svean Wandt'), ('Backgrounds', 'Svean Wandt'), ('Sprites and CG', 'Svean Wandt'), ('GUI', 'Svean Wandt'), ('Writing', 'Lukas Even'), ('Programming', 'Tony Tu'), ('Music', 'Fabian Braun'), ('Ignias', 'Headwookum'), ('Ignias', 'Headwookum'
+File "game/days/day36.rpy", line 56: expected statement.
+    shownscreen baroverlay
+                          ^
 
 Ren'Py Version: Ren'Py 7.4.4.1439
-Sun Jun 20 17:08:58 2021
+Sun Jun 20 18:20:36 2021

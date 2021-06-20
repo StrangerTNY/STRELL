@@ -100,7 +100,13 @@ label workload:
 
     play sound "audio/Imp/ImpAnnoyed.mp3"
     hide imp with moveoutright
-    show moira at right with dissolve
+    hide ignias
+    with dissolve
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    hide screen baroverlay
+    with dissolve
     jump minigame
 
 label keepbusy:
@@ -115,10 +121,17 @@ label keepbusy:
 
     narrator "The imp eyes Ignias suspiciously, then makes a mocking bow and scampers out the door"
 
+    
     hide imp with moveoutright
-    show moira at right with dissolve
-
-    jump minigame
+    hide moira
+    hide ignias
+    with dissolve
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    hide screen baroverlay
+    with dissolve
+    jump minigame 
 
     #CHOICES EVENT 3
 label pesticide:
@@ -350,6 +363,13 @@ label keepsouls:
     elif stress > 65:
         jump stressend
     else:
+        hide ignias
+        with dissolve
+        hide screen soulbar
+        hide screen stressbar
+        hide screen impeachmentbar
+        hide screen baroverlay
+        with dissolve
         jump minigame2
 
 label callheaven:
@@ -376,6 +396,13 @@ label callheaven:
     elif stress > 65:
         jump stressend
     else:
+        hide ignias
+        with dissolve
+        hide screen soulbar
+        hide screen stressbar
+        hide screen impeachmentbar
+        hide screen baroverlay
+        with dissolve
         jump minigame2
 
     #CHOICES EVENT Lucifer wants specific souls

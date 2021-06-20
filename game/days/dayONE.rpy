@@ -285,6 +285,7 @@ label ImpasWantMore:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -292,6 +293,7 @@ label ImpasWantMore:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
 
@@ -391,6 +393,7 @@ label infestation:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -398,6 +401,7 @@ label infestation:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
 
@@ -521,6 +525,7 @@ label competition:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -528,6 +533,7 @@ label competition:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
 
@@ -607,6 +613,7 @@ label endDayOne:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -614,6 +621,7 @@ label endDayOne:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
 
@@ -662,6 +670,7 @@ label soulend:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -669,6 +678,7 @@ label soulend:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
     $gameOver = True
@@ -723,6 +733,7 @@ label soulend:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with fade
     scene black
     with Pause(1)

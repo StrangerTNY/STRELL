@@ -690,7 +690,7 @@ default countermg = 0
 init python:
     def minigamecallback (drags,drop):    
         global countermg
-        if countermg > 6:
+        if countermg > 18:
             countermg = 1
         if not drop:
             return
@@ -705,12 +705,52 @@ init python:
             drags[0].droppable = True
             drags[0].bottom()
             countermg += 1
+        elif(drags[0].drag_name == "Ignias3"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Ignias4"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Ignias5"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Ignias6"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
         elif(drags[0].drag_name == "Imp1"):
             drags[0].draggable = False
             drags[0].droppable = True
             drags[0].bottom()
             countermg += 1
         elif(drags[0].drag_name == "Imp2"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp3"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp4"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp5"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp6"):
             drags[0].draggable = False
             drags[0].droppable = True
             drags[0].bottom()
@@ -725,10 +765,30 @@ init python:
             drags[0].droppable = True
             drags[0].bottom()
             countermg += 1
+        elif(drags[0].drag_name == "Lucifer3"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Lucifer4"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Lucifer5"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Lucifer6"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
         else:
             return
 
-        if countermg == 6:
+        if countermg == 18:
             return True
         else:
             return
@@ -753,7 +813,7 @@ screen minigame:
             child "/Minigame/AblageIgnias.png"
             droppable True
             draggable False
-            xpos 900 ypos 140
+            xpos 900 ypos 90
 
         drag:
             drag_name "Ignias1"
@@ -761,7 +821,7 @@ screen minigame:
             draggable True
             droppable False
             dragged minigamecallback
-            xpos 920 ypos 600
+            xpos 1300 ypos 400
         
         drag:
             drag_name "Ignias2"
@@ -769,7 +829,39 @@ screen minigame:
             draggable True
             droppable False
             dragged minigamecallback
-            xpos 950 ypos 600
+            xpos 275 ypos 523
+        
+        drag:
+            drag_name "Ignias3"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 753 ypos 631
+
+        drag:
+            drag_name "Ignias4"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 1200 ypos 700
+
+        drag:
+            drag_name "Ignias5"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 67 ypos 672
+
+        drag:
+            drag_name "Ignias6"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 358 ypos 538
     
 
     draggroup:
@@ -779,7 +871,7 @@ screen minigame:
             child "/Minigame/AblageImps.png"
             droppable True
             draggable False
-            xpos 500 ypos 140
+            xpos 500 ypos 90
 
         drag:
             drag_name "Imp1"
@@ -787,7 +879,7 @@ screen minigame:
             draggable True
             droppable False
             dragged minigamecallback
-            xpos 530 ypos 600
+            xpos 1530 ypos 731
 
         drag:
             drag_name "Imp2"
@@ -795,7 +887,38 @@ screen minigame:
             draggable True
             droppable False
             dragged minigamecallback
-            xpos 560 ypos 600
+            xpos 453 ypos 738
+        drag:
+            drag_name "Imp3"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 154 ypos 428
+
+        drag:
+            drag_name "Imp4"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 65 ypos 614
+
+        drag:
+            drag_name "Imp5"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 614 ypos 533
+    
+        drag:
+            drag_name "Imp6"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 1115 ypos 586
 
     draggroup:
         #Where the Paper needs to be on LUCIFER
@@ -804,7 +927,7 @@ screen minigame:
             child "/Minigame/AblageLucifer.png"
             droppable True
             draggable False
-            xpos 100 ypos 140
+            xpos 100 ypos 90
 
         drag:
             drag_name "Lucifer1"
@@ -812,7 +935,7 @@ screen minigame:
             draggable True
             droppable False
             dragged minigamecallback
-            xpos 100 ypos 600
+            xpos 247 ypos 750
 
         drag:
             drag_name "Lucifer2"
@@ -820,7 +943,39 @@ screen minigame:
             draggable True
             droppable False
             dragged minigamecallback
-            xpos 130 ypos 600
+            xpos 834 ypos 730
+
+        drag:
+            drag_name "Lucifer3"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 248 ypos 694
+        
+        drag:
+            drag_name "Lucifer4"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 1714 ypos 529
+        
+        drag:
+            drag_name "Lucifer5"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 468 ypos 604
+
+        drag:
+            drag_name "Lucifer6"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 389 ypos 510
 
 
 #Initializing all flags functions etc.

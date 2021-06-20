@@ -45,6 +45,7 @@ label overheatflag:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -52,6 +53,7 @@ label overheatflag:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
     $ignias_mood = "MadTalk"
@@ -116,6 +118,7 @@ label sabotageflag:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -123,6 +126,7 @@ label sabotageflag:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
     hide moira with dissolve
@@ -214,6 +218,7 @@ label heavensouls:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -221,6 +226,7 @@ label heavensouls:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
     $ignias_mood = "MadTalk"
@@ -286,6 +292,7 @@ label lucifersouls:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -293,6 +300,7 @@ label lucifersouls:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
     show ignias at left with dissolve
@@ -378,6 +386,7 @@ label hellhoundescape:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -385,6 +394,7 @@ label hellhoundescape:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
     narrator """some Imps scream
@@ -445,10 +455,12 @@ label end:
         jump stressend
     else:
         jump goodend
+
 label goodend:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -456,6 +468,7 @@ label goodend:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
 
@@ -628,6 +641,7 @@ label impeachmentend:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with fade
     scene black
     with Pause(1)
@@ -644,6 +658,7 @@ label stressend:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve
@@ -651,6 +666,7 @@ label stressend:
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
+    show screen baroverlay
     scene bgHell
     with fade
     show ignias at left with dissolve
@@ -719,6 +735,7 @@ label stressend:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with fade
     scene black
     with Pause(1)
