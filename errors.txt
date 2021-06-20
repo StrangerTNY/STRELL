@@ -2,9 +2,8 @@
 errors listed below, and try again.
 
 
-File "game/days/dayONE.rpy", line 283: expected end of line
-    play music minigame "audio/Minigame.mp3"
-                        ^
+File "game/script.rpy", line 1004: is not terminated with a newline. (Check strings and parenthesis.)
+        credits = ('Backgrounds', 'Svean Wandt'), ('Backgrounds', 'Svean Wandt'), ('Sprites and CG', 'Svean Wandt'), ('GUI', 'Svean Wandt'), ('Writing', 'Lukas Even'), ('Programming', 'Tony Tu'), ('Music', 'Fabian Braun'), ('Ignias', 'Headwookum'), ('Ignias', 'Headwookum'
 
 Ren'Py Version: Ren'Py 7.4.4.1439
-Wed Jun 16 18:03:21 2021
+Sun Jun 20 17:08:58 2021

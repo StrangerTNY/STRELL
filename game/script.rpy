@@ -19,6 +19,7 @@ image bgHell = im.Scale("OfficeBG.jpg", 1920, 1080)
 image Hallway = im.Scale("HallwayBG.jpg", 1920, 1080)
 image ThroneRoom = im.Scale("ThroneRoomBG.jpg", 1920, 1080)
 image cerbcell = im.Scale("Dungeon.jpg", 1920, 1080)
+image qoeoffice = im.Scale("QueenOfficeBG", 1920, 1080)
 image lucifer :
      im.Scale("Boss.png",989,1194)
 
@@ -552,7 +553,7 @@ image twins:
     "twins_mood == 'DefaultTalk'", "twins DefaultTalk",
     "twins_mood == 'Happy'", "twins Happy",
     "twins_mood == 'Mad'", "twins Mad",
-    "twins_mood == 'Suprised'", "twins Suprised",
+    "twins_mood == 'Suprised'", "twins Suprised",)
     )
     zoom 0.78
 
@@ -689,7 +690,8 @@ default countermg = 0
 init python:
     def minigamecallback (drags,drop):    
         global countermg
-
+        if countermg > 6:
+            countermg = 1
         if not drop:
             return
 
@@ -734,6 +736,7 @@ init python:
         
 screen minigame:
     # A map as background.
+    $countermg = 0
     add "/Minigame/MinigameBG.jpg"
     zorder 99
     frame:
@@ -964,7 +967,52 @@ label start:
     with fade
     call day36
 
+label credits:
+    
+#    image splash = Text("{size=90}Company Name", text_align=0.5, ypos=0.5) #Placeholder code if you don't have anything to use as a splash image or are just pure lazy.
+    image splash = "GUI/Logo.png" #This is usually going to be located in an init block executed early in the code to show it when the game loads up as a splash screen.
+#    image cred = Text(credits_s, font="myfont.ttf", text_align=0.5) #use this if you want to use special fonts
+    image cred = Text(credits_s, text_align=0.5)
+    image theend = Text("{size=80}The End", text_align=0.5)
+    image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
+    $ credits_speed = 25 #scrolling speed in seconds
+    scene black #replace this with a fancy background
+    show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+    show theend:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide theend
+    with dissolve
+    with Pause(credits_speed - 5)
+    show splash:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide splash
+    with dissolve
+    with Pause(1)
+    show thanks:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(4)
+    hide thanks
+    with dissolve
+    
 
+init python:
+    credits = ('Backgrounds', 'Svean Wandt'), ('Character Design', 'Svean Wandt'), ('GUI', 'Svean Wandt'), ('Writing', 'Lukas Even'), ('Programming', 'Tony Tu'), ('Music', 'Fabian Braun'), ('Ignias', 'Sascha Clausen'), ('Moira', 'Kristin Kmietzak'), ('Imp', 'Lukas Even') , ('Lucifer', 'Sascha Clausen'), ('Queen Of Eyes', ''), ('Gatekeeper Twins', 'Svea Wandt & Lukas Büsen')
+    credits_s = "{size=80}STRELL\n\n"
+    c1 = ''
+    for c in credits:
+        if not c1==c[0]:
+            credits_s += "\n{size=60}" + c[0] + "\n"
+        credits_s += "{size=40}" + c[1] + "\n"
+        c1=c[0]
+    credits_s += "\n{size=60}Engine\n{size=40}" + renpy.version()
 
 #label gameover:
 #    $ stress = 0

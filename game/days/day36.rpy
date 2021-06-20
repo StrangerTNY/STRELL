@@ -271,9 +271,18 @@ label heavensouls:
             jump callheaven
             #+stress, impeachment
 
+#MINIGAME
+label minigame2:
+    #Minigame Test
+    $ minigame_jump = 'lucifersouls'
+    play minigame "audio/Minigame.mp3"
+    call screen minigame 
 
     #NEXT EVENT
 label lucifersouls:
+    stop minigame
+    play music "audio/myuu-dark-creature.mp3" loop
+
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
@@ -532,6 +541,7 @@ label goodend:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with fade
     scene black
     with Pause(1)
@@ -543,11 +553,13 @@ label goodend:
     with Pause(1)
     $renpy.movie_cutscene('images/LoadingScreenNoLoop.ogv', loops = 3  )
     return
+    
 
 label impeachmentend:
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
+    hide screen baroverlay
     with dissolve
     scene black
     with dissolve

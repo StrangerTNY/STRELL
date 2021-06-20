@@ -350,7 +350,7 @@ label keepsouls:
     elif stress > 65:
         jump stressend
     else:
-        jump lucifersouls
+        jump minigame2
 
 label callheaven:
     $increaseImpeachment(10.84)
@@ -376,7 +376,7 @@ label callheaven:
     elif stress > 65:
         jump stressend
     else:
-        jump lucifersouls
+        jump minigame2
 
     #CHOICES EVENT Lucifer wants specific souls
 label corrupt:
