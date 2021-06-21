@@ -726,43 +726,8 @@ label traindog:
     ignias "{i}Bows slightly to reach through the bars and pet the dog{/i}"
     ignias "Good boy! Now, let me find your leash…"
     
-    narrator "Ignias leaves the dungeon and returns to his office after playing a bit with Cerberus. His thoughts still linger on his dog as he tries to focus once again on his never-diminishing workload. "
-
-    hide ignias
-    hide screen baroverlay
-    hide screen soulbar
-    hide screen stressbar
-    hide screen impeachmentbar
-    scene black
-    with dissolve
-
-    scene bgHell
-    show screen baroverlay
-    show screen soulbar
-    show screen stressbar
-    show screen impeachmentbar
-    with fade
-    show ignias at left with dissolve
-
-    narrator "After long last, this workday also comes to a close. Ignias is torn between relief of having survived another day in his position and anxiety of what this day’s meeting with the boss would bring. His musings are interrupted by a familiar ring"#
-
-    play sound "audio/Lucifer/growling 3.mp3"
-    show lucifer at right with flash
-    lucifer "GOOD EVENING, OVERSEER 26. I TRUST
-    ALL IS WELL ON THIS FINE EVENING?"
-    play sound "audio/Ignias/no.mp3"
-    narrator "Ignias bows his head"
-    ignias "I have no irregularities to report, my Lord. Work continues, as does the flow of souls."
-    play sound "audio/Lucifer/chuckle 1.mp3"
-    lucifer """SPLENDID. I LOOK FORWARD TO YOUR
-    NEW DELIVERY TOMORROW AT THE USUAL TIME. AS YOU WELL KNOW, CONSIDER THE
-
-    REQUIRED AMOUNT TO BE ONE AND A HALF OF WHAT WAS REQUIRED OF YOU TODAY. DO NOT
-    TRY TO UNDERCUT IT. THAT WOULD GO VERY POORLY."""
-    hide lucifer with flash
-    narrator "The image disappears and leaves a resigned Ignias behind"
-    $ignias_mood = "Sad"
-    ignias "{i}I made it another day, barely. I can see now how the other Overseers are driven to acts of madness with extreme consequences to please Lucifer…{/i}"
+    jump endDay18
+    
 
 label seekexpert:
     $increaseImpeachment(8.13)
@@ -785,40 +750,4 @@ label seekexpert:
     play sound "audio/Ignias/sorry.mp3"
     ignias "Do not worry boy, the next one will be better than the last. I promise to come down here more often as well, it has been a while since I last played with you…"
 
-    narrator "Ignias leaves the dungeon and returns to his office after playing a bit with Cerberus. His thoughts still linger on his dog as he tries to focus once again on his never-diminishing workload. "
-
-    hide ignias
-    hide screen baroverlay
-    hide screen soulbar
-    hide screen stressbar
-    hide screen impeachmentbar
-    scene black
-    with dissolve
-
-    scene bgHell
-    show screen baroverlay
-    show screen soulbar
-    show screen stressbar
-    show screen impeachmentbar
-    with fade
-    show ignias at left with dissolve
-
-    narrator "After long last, this workday also comes to a close. Ignias is torn between relief of having survived another day in his position and anxiety of what this day’s meeting with the boss would bring. His musings are interrupted by a familiar ring"#
-
-    play sound "audio/Lucifer/growling 3.mp3"
-    show lucifer at right with flash
-    lucifer "GOOD EVENING, OVERSEER 26. I TRUST
-    ALL IS WELL ON THIS FINE EVENING?"
-    play sound "audio/Ignias/no.mp3"
-    narrator "Ignias bows his head"
-    ignias "I have no irregularities to report, my Lord. Work continues, as does the flow of souls."
-    play sound "audio/Lucifer/chuckle 1.mp3"
-    lucifer """SPLENDID. I LOOK FORWARD TO YOUR
-    NEW DELIVERY TOMORROW AT THE USUAL TIME. AS YOU WELL KNOW, CONSIDER THE
-
-    REQUIRED AMOUNT TO BE ONE AND A HALF OF WHAT WAS REQUIRED OF YOU TODAY. DO NOT
-    TRY TO UNDERCUT IT. THAT WOULD GO VERY POORLY."""
-    hide lucifer with flash
-    narrator "The image disappears and leaves a resigned Ignias behind"
-    $ignias_mood = "Sad"
-    ignias "{i}I made it another day, barely. I can see now how the other Overseers are driven to acts of madness with extreme consequences to please Lucifer…{/i}"
+    jump endDay18

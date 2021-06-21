@@ -1095,14 +1095,14 @@ label start:
 
     #Start of the Game
         #Start Day One
-    call callDay 
+    call callDay from _call_callDay 
     scene bgHell
     show screen baroverlay
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
     with fade
-    call dayONE 
+    call dayONE from _call_dayONE 
 
     #End Day 1
     hide ignias
@@ -1115,7 +1115,7 @@ label start:
 
     #Start Day 18
     $ souls = 0
-    call callDay3
+    call callDay3 from _call_callDay3
     scene bgHell
     scene bgHell
     show screen baroverlay
@@ -1123,7 +1123,7 @@ label start:
     show screen stressbar
     show screen impeachmentbar
     with fade
-    call day18
+    call day18 from _call_day18
 
     #End Day 18
     hide ignias
@@ -1136,14 +1136,14 @@ label start:
 
     #Start Day 36
     $ souls = 0
-    call callDay2 
+    call callDay2 from _call_callDay2 
     scene bgHell
     show screen baroverlay
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
     with fade
-    call day36
+    call day36 from _call_day36
 
 label credits:
     

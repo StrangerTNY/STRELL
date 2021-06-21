@@ -10,12 +10,18 @@ define e = Character("Eileen")
 define ignias = Character("Ignias", who_color="#B29782")
 define moira = Character("Moira", who_color="#c285e0")
 define imp = Character("Imp")
-define lucifer = Character("Lucifer")
+define lucifer = Character("Lucifer", who_color="#1f0000")
+define twinm = Character("Modean", who_color="#000075")
+define twinf = Character("Mastema", who_color="#000075")
+define qoe = Character ("Queen of Eyes", who_color="32174d")
+define cerb = Character ("Cerberus", who_color = "#cfcfc4")
 
 #IMAGES
 image bgHell = im.Scale("OfficeBG.jpg", 1920, 1080)
 image Hallway = im.Scale("HallwayBG.jpg", 1920, 1080)
 image ThroneRoom = im.Scale("ThroneRoomBG.jpg", 1920, 1080)
+image cerbcell = im.Scale("Dungeon.jpg", 1920, 1080)
+image qoeoffice = im.Scale("QueenOfficeBG.jpg", 1920, 1080)
 image lucifer :
      im.Scale("Boss.png",989,1194)
 
@@ -32,7 +38,7 @@ image loadscreen = Movie(play = "LoadinScreenNoLoop.mp4")
 
 #Animated Characterstates
 
-    #IGNIAS
+#IGNIAS
 default ignias_mood = "Default" #Moods: Default, DefaultTalk, Happy, Mad, MadTalk, Sad, SadTalk, Suprised, SuprisedTalk
 
 image ignias Default:
@@ -203,7 +209,7 @@ image ignias:
     )
     zoom 0.78
 
-    #MOIRA
+#MOIRA
 default moira_mood = "Default" #Moods: Default, DefaultTalk, Happy, Mad, MadTalk, Sad, SadTalk, Suprised, SuprisedTalk
 
 image moira Default:
@@ -390,9 +396,218 @@ image imp:
     )
     zoom 0.78
 
+#Queen of Eyes
+
+default qoe_mood = "Default" #Moods: Default Happy Mad
+
+image qoe Default:
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink2.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    repeat
+
+image qoe Happy:
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink2.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    repeat
+
+image qoe Mad:
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink2.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink1.png"
+    .1
+    "QueenOfEyes/[qoe_mood]/Blink0.png"
+    1.5
+    repeat
+
+image qoe:
+    LiveComposite(
+    (980,1200), #(width, height)
+    (0,0), ConditionSwitch(
+    "qoe_mood == 'Default'", "qoe Default",
+    "qoe_mood == 'Mad'", "qoe Mad",
+    "qoe_mood == 'Happy'","qoe Happy",)
+    )
+    zoom 0.78
+
+#GATEKEEPER TWINS
+default twins_mood = "Default" #Moods: Default, DefaultTalk, Happy, Mad, Suprised
+
+image twins Default:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins DefaultTalk:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins Happy:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins Mad:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins Suprised:
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink1.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink2.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink3.png"
+    1.5
+    "GatekeeperTwins/[twins_mood]/Blink4.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink5.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink6.png"
+    .1
+    "GatekeeperTwins/[twins_mood]/Blink0.png"
+    1.5
+    repeat
+
+image twins:
+    LiveComposite(
+    (710,1000), #(width, height)
+    (0,0), ConditionSwitch(
+    "twins_mood == 'Default'", "twins Default",
+    "twins_mood == 'DefaultTalk'", "twins DefaultTalk",
+    "twins_mood == 'Happy'", "twins Happy",
+    "twins_mood == 'Mad'", "twins Mad",
+    "twins_mood == 'Suprised'", "twins Suprised",)
+    )
+    zoom 0.78
+
+#CERBERUS
+
+default cerberus_mood = "Default" #Moods: Default Happy 
+
+image cerberus Default:
+    "Cerberus/[cerberus_mood]/Blink0.png"
+    1.5
+    "Cerberus/[cerberus_mood]/Blink1.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink2.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink3.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink4.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink0.png"
+    1.5
+    repeat
+
+image cerberus Happy:
+    "Cerberus/[cerberus_mood]/Blink0.png"
+    1.5
+    "Cerberus/[cerberus_mood]/Blink1.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink2.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink3.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink4.png"
+    .1
+    "Cerberus/[cerberus_mood]/Blink0.png"
+    1.5
+    repeat
+
+image cerberus:
+    LiveComposite(
+    (1040,1200), #(width, height)
+    (0,0), ConditionSwitch(
+    "cerberus_mood == 'Default'", "cerberus Default",
+    "cerberus_mood == 'Happy'","cerberus Happy",)
+    )
+    zoom 0.78
+
+
 #AUDIO
 define audio.knock = "audio/knock1.mp3"
 define audio.crashing = "audio/crashing.mp3"
+define audio.timerrunout = "audio/Failure.mp3"
+define audio.choicesound = "audio/Good_Choice.wav"
 
 #Flags
 $ impStrike = False
@@ -418,104 +633,447 @@ init:
     $ day = 1
     $ gameOver = False
 
+screen baroverlay:
+    zorder 1
+    frame:
+        xalign 0.0
+        yalign 0.0
+        background None
+        vbox:
+            image "Meter_Overlay.png"
 #Stressbar
 screen stressbar:
+    
     #text "Stress" vertical True size 20 xalign 0.02 yalign 0.05  outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
     bar value StaticValue (stress, 100):
-        xalign 0.0165 yalign 0.13
-        xmaximum 200
-        ymaximum 75
-        left_bar Frame("StressFULL2.png", 0, 00 )
-        right_bar Frame("StressEMPTY.png", 0, 0)
+        xalign 0.018 yalign 0.16
+        xmaximum 254
+        ymaximum 72
+        left_bar Frame("Stress_meter2.png", 0, 00 )
+        right_bar Frame("Stress_meter2_empty.png", 0, 0)
         #thumb "_theme_bordered/brvslider_thumb.png"
         thumb_shadow None
+    
 
 
 #Soulbar
 screen soulbar:
+    
     #text "Souls" vertical True size 20 xalign 0.05 yalign 0.05  outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
     bar value StaticValue (souls, 100):
-        xalign 0.0195 yalign 0.00
+        xalign 0.018 yalign 0.035
         xmaximum 500
-        ymaximum 75
-        left_bar Frame("SoulsFULL2.png", 0, 0)
-        right_bar Frame("SoulsEMPTY.png", 0, 0)
+        ymaximum 56
+        left_bar Frame("Soul_meter2.png", 0, 0)
+        right_bar Frame("Soul_meter2_empty.png", 0, 0)
         #thumb "_theme_marker/inkvslider_thumb.png"
         thumb_shadow None
 
 #Impeachmentbar
 screen impeachmentbar:
+    
     #text "Impeachment" vertical True size 11 xalign 0.08 yalign 0.05  outlines [ (absolute(2), "#000", absolute(0), absolute(0)) ]
     bar value StaticValue (impeachment, 100):
-        xalign 0.016 yalign 0.07
-        xmaximum 200
-        ymaximum 75
-        left_bar Frame("ImpeachmentFULL2.png", 0, 0)
-        right_bar Frame("ImpeachmentEMPTY.png", 0, 0)
+        xalign 0.018 yalign 0.09
+        xmaximum 254
+        ymaximum 72
+        left_bar Frame("Impeachment_meter2.png", 0, 0)
+        right_bar Frame("Impeachment_meter2_empty.png", 0, 0)
         #thumb "_theme_regal/revslider_thumb.png"
         thumb_shadow None
 
-#Increase Bar function
+#Decision Countdown
+screen countdown:
+    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+    bar value time range timer_range xalign 0.5 yalign 0.5 xmaximum 300 at alpha_dissolve # This is the timer bar.
+
+default countermg = 0
+
 init python:
-    def increaseStress(val):
-        global stress
-        global counter
-        counter = 0
-        while counter < val:
-            if(stress < 0 or stress > 100):
-                renpy.jump("gameover")
-            stress += 1
-            counter += 1
-            renpy.pause(0.01)
-    def increaseSouls(val):
-        global souls
-        global counter
-        counter = 0
-        while counter < val:
-            #if(souls < 0 or souls > 100):
-            #    renpy.jump("gameover")
-            souls += 1
-            counter += 1
-            renpy.pause(0.01)
-    def increaseImpeachment(val):
-        global impeachment
-        global counter
-        counter = 0
-        while counter < val:
-            #if(impeachment < 0 or impeachment > 100):
-            #    renpy.jump("gameover")
-            impeachment += 1
-            counter += 1
-            renpy.pause(0.01)
-    def decreaseStress(val):
-        global stress
-        global counter
-        while counter < val:
-            #if(stress < 0 or stress > 100):
-            #    renpy.jump("gameover")
-            stress -= 1
-            counter += 1
-            renpy.pause(0.01)
-    def decreaseSouls(val):
-        global souls
-        global counter
-        counter = 0
-        while counter < val:
-            #if(souls < 0 or souls > 100):
-            #    renpy.jump("gameover")
-            souls -= 1
-            counter += 1
-            renpy.pause(0.01)
-    def decreaseImpeachment(val):
-        global impeachment
-        global counter
-        counter = 0
-        while counter < val:
-            #if(impeachment < 0 or impeachment > 100):
-            #    renpy.jump("gameover")
-            impeachment -= 1
-            counter += 1
-            renpy.pause(0.01)
+    def minigamecallback (drags,drop):    
+        global countermg
+        if countermg > 18:
+            countermg = 1
+        if not drop:
+            return
+
+        if(drags[0].drag_name == "Ignias1"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Ignias2"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Ignias3"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Ignias4"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Ignias5"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Ignias6"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp1"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp2"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp3"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp4"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp5"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Imp6"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Lucifer1"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Lucifer2"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Lucifer3"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Lucifer4"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Lucifer5"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        elif(drags[0].drag_name == "Lucifer6"):
+            drags[0].draggable = False
+            drags[0].droppable = True
+            drags[0].bottom()
+            countermg += 1
+        else:
+            return
+
+        if countermg == 18:
+            return True
+        else:
+            return
+
+        
+screen minigame:
+    # A map as background.
+    $countermg = 0
+    add "/Minigame/MinigameBG.jpg"
+    zorder 99
+    frame:
+        xalign 0.95
+        yalign 0.05
+        add DynamicDisplayable(countdownmg, length=31)
+   
+    $ ui.timer(33.0, ui.jumps(minigame_jump)) #Label to jump to after countdown ends
+
+    draggroup:
+        #Where the Paper needs to be on IGNIAS
+        drag:
+            drag_name "IgniasDeck"
+            child "/Minigame/AblageIgnias.png"
+            droppable True
+            draggable False
+            xpos 900 ypos 90
+
+        drag:
+            drag_name "Ignias1"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 1300 ypos 400
+        
+        drag:
+            drag_name "Ignias2"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 275 ypos 523
+        
+        drag:
+            drag_name "Ignias3"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 753 ypos 631
+
+        drag:
+            drag_name "Ignias4"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 1200 ypos 700
+
+        drag:
+            drag_name "Ignias5"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 67 ypos 672
+
+        drag:
+            drag_name "Ignias6"
+            child "/Minigame/PaperIgnias.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 358 ypos 538
+    
+
+    draggroup:
+        #Where the Paper needs to be on IMPS
+        drag:
+            drag_name "ImpDeck"
+            child "/Minigame/AblageImps.png"
+            droppable True
+            draggable False
+            xpos 500 ypos 90
+
+        drag:
+            drag_name "Imp1"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 1530 ypos 731
+
+        drag:
+            drag_name "Imp2"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 453 ypos 738
+        drag:
+            drag_name "Imp3"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 154 ypos 428
+
+        drag:
+            drag_name "Imp4"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 65 ypos 614
+
+        drag:
+            drag_name "Imp5"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 614 ypos 533
+    
+        drag:
+            drag_name "Imp6"
+            child "/Minigame/PaperImps.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 1115 ypos 586
+
+    draggroup:
+        #Where the Paper needs to be on LUCIFER
+        drag:
+            drag_name "LuciferDeck"
+            child "/Minigame/AblageLucifer.png"
+            droppable True
+            draggable False
+            xpos 100 ypos 90
+
+        drag:
+            drag_name "Lucifer1"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 247 ypos 750
+
+        drag:
+            drag_name "Lucifer2"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 834 ypos 730
+
+        drag:
+            drag_name "Lucifer3"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 248 ypos 694
+        
+        drag:
+            drag_name "Lucifer4"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 1714 ypos 529
+        
+        drag:
+            drag_name "Lucifer5"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 468 ypos 604
+
+        drag:
+            drag_name "Lucifer6"
+            child "/Minigame/PaperLucifer.png"
+            draggable True
+            droppable False
+            dragged minigamecallback
+            xpos 389 ypos 510
+
+
+#Initializing all flags functions etc.
+init:
+    
+
+    #Variablse for Decision Timer
+    $ timer_range = 0
+    $ timer_jump = 0
+    $ minigame_jump = 0
+
+    #Custom Music Channels
+    $renpy.music.register_channel("soundMoi", mixer ="voice", loop = False)
+    $renpy.music.register_channel("timer", mixer ="music", loop = False)
+    $renpy.music.register_channel("minigame", mixer ="music", loop = False)
+    
+    #Custom Image effect
+    transform flip:
+        xzoom -1.0
+
+    python:
+        #Bar functions
+        def increaseStress(val):
+            global stress
+            global counter
+            counter = 0
+            while counter < val:
+                if(stress < 0 or stress > 100):
+                    renpy.jump("gameover")
+                stress += 1
+                counter += 1
+                renpy.pause(0.01)
+        def increaseSouls(val):
+            global souls
+            global counter
+            counter = 0
+            while counter < val:
+                #if(souls < 0 or souls > 100):
+                #    renpy.jump("gameover")
+                souls += 1
+                counter += 1
+                renpy.pause(0.01)
+        def increaseImpeachment(val):
+            global impeachment
+            global counter
+            counter = 0
+            while counter < val:
+                #if(impeachment < 0 or impeachment > 100):
+                #    renpy.jump("gameover")
+                impeachment += 1
+                counter += 1
+                renpy.pause(0.01)
+        def decreaseStress(val):
+            global stress
+            global counter
+            while counter < val:
+                #if(stress < 0 or stress > 100):
+                #    renpy.jump("gameover")
+                stress -= 1
+                counter += 1
+                renpy.pause(0.01)
+        def decreaseSouls(val):
+            global souls
+            global counter
+            counter = 0
+            while counter < val:
+                #if(souls < 0 or souls > 100):
+                #    renpy.jump("gameover")
+                souls -= 1
+                counter += 1
+                renpy.pause(0.01)
+        def decreaseImpeachment(val):
+            global impeachment
+            global counter
+            counter = 0
+            while counter < val:
+                #if(impeachment < 0 or impeachment > 100):
+                #    renpy.jump("gameover")
+                impeachment -= 1
+                counter += 1
+                renpy.pause(0.01)
+
+        #Countdown for Minigame
+        def countdownmg(st, at, length=0.0):
+
+            remaining = length - st
+
+            if remaining > 2.0:
+                return Text("%.1f" % remaining, color="#fff", size=72), .1
+            elif remaining > 0.0:
+                return Text("%.1f" % remaining, color="#f00", size=72), .1
+            else:
+                return anim.Blink(Text("0.0", color="#f00", size=72)), None
+    # Show a countdown for 10 seconds. for Minigame
+    image countdownmg = DynamicDisplayable(countdownmg, length=5.0)
+    
 
 transform alpha_dissolve:
     alpha 0.0
@@ -524,15 +1082,6 @@ transform alpha_dissolve:
         linear 0.5 alpha 0
     # This is to fade the bar in and out, and is only required once in your script
 
-screen countdown:
-    timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
-    bar value time range timer_range xalign 0.5 yalign 0.5 xmaximum 300 at alpha_dissolve # This is the timer bar.
-init:
-    $ timer_range = 0
-    $ timer_jump = 0
-    $renpy.music.register_channel("soundMoi", mixer ="voice", loop = False)
-    transform flip:
-        xzoom -1.0
 
 
 #{i}{/i}
@@ -546,16 +1095,39 @@ label start:
 
     #Start of the Game
         #Start Day One
-    call callDay
+    call callDay 
     scene bgHell
+    show screen baroverlay
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
     with fade
-    call dayONE from _call_dayONE
+    call dayONE 
 
     #End Day 1
     hide ignias
+    hide screen baroverlay
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    scene black
+    with dissolve
+
+    #Start Day 18
+    $ souls = 0
+    call callDay3
+    scene bgHell
+    scene bgHell
+    show screen baroverlay
+    show screen soulbar
+    show screen stressbar
+    show screen impeachmentbar
+    with fade
+    call day18
+
+    #End Day 18
+    hide ignias
+    hide screen baroverlay
     hide screen soulbar
     hide screen stressbar
     hide screen impeachmentbar
@@ -564,15 +1136,61 @@ label start:
 
     #Start Day 36
     $ souls = 0
-    call callDay2
+    call callDay2 
     scene bgHell
+    show screen baroverlay
     show screen soulbar
     show screen stressbar
     show screen impeachmentbar
     with fade
     call day36
 
+label credits:
+    
+#    image splash = Text("{size=90}Company Name", text_align=0.5, ypos=0.5) #Placeholder code if you don't have anything to use as a splash image or are just pure lazy.
+    image splash = "GUI/Logo.png" #This is usually going to be located in an init block executed early in the code to show it when the game loads up as a splash screen.
+#    image cred = Text(credits_s, font="myfont.ttf", text_align=0.5) #use this if you want to use special fonts
+    image cred = Text(credits_s, text_align=0.5)
+    image theend = Text("{size=80}The End", text_align=0.5)
+    image thanks = Text("{size=80}Thanks for Playing!", text_align=0.5)
+    $ credits_speed = 25 #scrolling speed in seconds
+    scene black #replace this with a fancy background
+    show cred at Move((0.5, 5.0), (0.5, 0.0), credits_speed, repeat=False, bounce=False, xanchor="center", yanchor="bottom")
+    show theend:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide theend
+    with dissolve
+    with Pause(credits_speed - 5)
+    show splash:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(3)
+    hide splash
+    with dissolve
+    with Pause(1)
+    show thanks:
+        yanchor 0.5 ypos 0.5
+        xanchor 0.5 xpos 0.5
+    with dissolve
+    with Pause(4)
+    hide thanks
+    with dissolve
+    
 
+init python:
+    credits = ('Backgrounds', 'Svean Wandt'), ('Character Design', 'Svean Wandt'), ('GUI', 'Svean Wandt'), ('Writing', 'Lukas Even'), ('Programming', 'Tony Tu'), ('Music', 'Fabian Braun'), ('Ignias', 'Sascha Clausen'), ('Moira', 'Kristin Kmietzak'), ('Imp', 'Lukas Even') , ('Lucifer', 'Sascha Clausen'), ('Queen Of Eyes', 'Friederike Fröhlich'), ('Mastema & Modean', 'Svea Wandt & Lukas Büsen')
+    credits_s = "{size=80}STRELL\n\n"
+    c1 = ''
+    for c in credits:
+        if not c1==c[0]:
+            credits_s += "\n{size=60}" + c[0] + "\n"
+        credits_s += "{size=40}" + c[1] + "\n"
+        c1=c[0]
+    credits_s += "\n{size=60}Engine\n{size=40}" + renpy.version()
 
 #label gameover:
 #    $ stress = 0
