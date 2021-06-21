@@ -15,3 +15,12 @@ label callDay2:
     pause
     hide day2 with dissolve
     return
+
+label callDay3:
+
+    image day3 = Text(_("Day 18"), size=70, yalign=.35,color="#fff")
+
+    show day3 with dissolve
+    pause
+    hide day3 with dissolve
+    return

@@ -10,16 +10,18 @@ define e = Character("Eileen")
 define ignias = Character("Ignias", who_color="#B29782")
 define moira = Character("Moira", who_color="#c285e0")
 define imp = Character("Imp")
-define lucifer = Character("Lucifer")
-define twins = Character("Gatekeepers")
-define qoe = Character ("Queen of Eyes")
+define lucifer = Character("Lucifer", who_color="#1f0000")
+define twinm = Character("Modean", who_color="#000075")
+define twinf = Character("Mastema", who_color="#000075")
+define qoe = Character ("Queen of Eyes", who_color="32174d")
+define cerb = Character ("Cerberus", who_color = "#cfcfc4")
 
 #IMAGES
 image bgHell = im.Scale("OfficeBG.jpg", 1920, 1080)
 image Hallway = im.Scale("HallwayBG.jpg", 1920, 1080)
 image ThroneRoom = im.Scale("ThroneRoomBG.jpg", 1920, 1080)
 image cerbcell = im.Scale("Dungeon.jpg", 1920, 1080)
-image qoeoffice = im.Scale("QueenOfficeBG", 1920, 1080)
+image qoeoffice = im.Scale("QueenOfficeBG.jpg", 1920, 1080)
 image lucifer :
      im.Scale("Boss.png",989,1194)
 
@@ -1111,6 +1113,27 @@ label start:
     scene black
     with dissolve
 
+    #Start Day 18
+    $ souls = 0
+    call callDay3
+    scene bgHell
+    scene bgHell
+    show screen baroverlay
+    show screen soulbar
+    show screen stressbar
+    show screen impeachmentbar
+    with fade
+    call day18
+
+    #End Day 18
+    hide ignias
+    hide screen baroverlay
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    scene black
+    with dissolve
+
     #Start Day 36
     $ souls = 0
     call callDay2 
@@ -1159,7 +1182,7 @@ label credits:
     
 
 init python:
-    credits = ('Backgrounds', 'Svean Wandt'), ('Character Design', 'Svean Wandt'), ('GUI', 'Svean Wandt'), ('Writing', 'Lukas Even'), ('Programming', 'Tony Tu'), ('Music', 'Fabian Braun'), ('Ignias', 'Sascha Clausen'), ('Moira', 'Kristin Kmietzak'), ('Imp', 'Lukas Even') , ('Lucifer', 'Sascha Clausen'), ('Queen Of Eyes', ''), ('Gatekeeper Twins', 'Svea Wandt & Lukas Büsen')
+    credits = ('Backgrounds', 'Svean Wandt'), ('Character Design', 'Svean Wandt'), ('GUI', 'Svean Wandt'), ('Writing', 'Lukas Even'), ('Programming', 'Tony Tu'), ('Music', 'Fabian Braun'), ('Ignias', 'Sascha Clausen'), ('Moira', 'Kristin Kmietzak'), ('Imp', 'Lukas Even') , ('Lucifer', 'Sascha Clausen'), ('Queen Of Eyes', 'Friederike Fröhlich'), ('Mastema & Modean', 'Svea Wandt & Lukas Büsen')
     credits_s = "{size=80}STRELL\n\n"
     c1 = ''
     for c in credits:

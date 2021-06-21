@@ -2,9 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/days/day36.rpy", line 56: expected statement.
-    shownscreen baroverlay
-                          ^
+File "game/choices/choices.rpy", line 779: expected statement.
+(Perhaps you left out a " at the end of the first line.)
+    lucifer """
+    
+        """
 
 Ren'Py Version: Ren'Py 7.4.4.1439
-Sun Jun 20 18:20:36 2021
+Mon Jun 21 22:52:47 2021

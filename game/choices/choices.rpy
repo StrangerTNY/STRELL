@@ -4,7 +4,7 @@ label impshift:
     #VARIABLES
     $sabotage = True
     $overheat = False
-    $increaseImpeachment(10.84)
+    $increaseImpeachment(8.13)
     $increaseSouls(43)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
@@ -57,7 +57,7 @@ label equipment:
     $sabotage = False
     $overheat = True
     $increaseSouls(43)
-    $increaseStress(10.84)
+    $increaseStress(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     play sound "audio/Ignias/huh2.mp3"
@@ -87,7 +87,7 @@ label equipment:
 
     #CHOICES EVENT 2
 label workload:
-    $increaseImpeachment(10.84)
+    $increaseImpeachment(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -110,7 +110,7 @@ label workload:
     jump minigame
 
 label keepbusy:
-    $increaseStress(10.84)
+    $increaseStress(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -135,7 +135,7 @@ label keepbusy:
 
     #CHOICES EVENT 3
 label pesticide:
-    $increaseImpeachment(10.84)
+    $increaseImpeachment(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -159,7 +159,7 @@ label pesticide:
     jump competition
 
 label relocate:
-    $increaseStress(10.84)
+    $increaseStress(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -184,8 +184,9 @@ label relocate:
 
     #CHOICES EVENT 4
 label goig:
-    $increaseStress(10.84)
+    $increaseStress(8.13)
     $increaseSouls(43)
+    $ neighbourhoodBeef = True
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -205,7 +206,7 @@ label goig:
     jump endDayOne
 
 label goimp:
-    $increaseImpeachment(10.84)
+    $increaseImpeachment(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -246,12 +247,13 @@ label goimp:
     jump endDayOne
 
 
+##########################################################################################################
 
 
 
     #CHOICES FOR DAY 36
 label standstill:
-    $increaseStress(10.84)
+    $increaseStress(8.13)
     show ignias at left
     show imp at right
     with dissolve
@@ -268,7 +270,7 @@ label standstill:
         jump heavensouls
 
 label coolvats:
-    $increaseImpeachment(10.84)
+    $increaseImpeachment(8.13)
     $increaseSouls(14.2)
     show ignias at left
     show imp at right
@@ -288,7 +290,7 @@ label coolvats:
 
 label workextra:
     $increaseSouls(14.2)
-    $increaseStress(10.84)
+    $increaseStress(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left
     show imp at right
@@ -309,7 +311,7 @@ label workextra:
 
 label repairvats:
     $increaseSouls(14.2)
-    $increaseImpeachment(10.84)
+    $increaseImpeachment(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left
     show imp at right
@@ -344,7 +346,7 @@ label repairvats:
     #CHOICES EVENT Souls which actually belong in heaven got extracted
 label keepsouls:
     $increaseSouls(14.2)
-    $increaseStress(10.84)
+    $increaseStress(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -373,8 +375,8 @@ label keepsouls:
         jump minigame2
 
 label callheaven:
-    $increaseImpeachment(10.84)
-    $increaseStress(10.84)
+    $increaseImpeachment(8.13)
+    $increaseStress(8.13)
     $ignias_mood ="MadTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -408,7 +410,7 @@ label callheaven:
     #CHOICES EVENT Lucifer wants specific souls
 label corrupt:
     $increaseSouls(14.2)
-    $increaseStress(10.84)
+    $increaseStress(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -432,7 +434,7 @@ label corrupt:
         jump hellhoundescape
 label impsearch:
     $increaseSouls(14.2)
-    $increaseImpeachment(10.84)
+    $increaseImpeachment(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -460,7 +462,7 @@ label impsearch:
 
     #CHOICES EVENT Hellhound escapes
 label askmoira:
-    $increaseStress(10.84)
+    $increaseStress(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -476,8 +478,8 @@ label askmoira:
 
     jump end
 label sendimps:
-    $increaseStress(10.84)
-    $decreaseImpeachment(10.84)
+    $increaseStress(8.13)
+    $decreaseImpeachment(8.13)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -501,3 +503,322 @@ label sendimps:
 
     hide ignias with dissolve
     jump end
+
+
+
+###############################################
+#DAY 18 
+
+
+#CHOICES FORM KERFUFFLE
+label busymorework:
+    $increaseStress(8.13)
+    $increaseSouls(17.04)
+    $ignias_mood = "DefaultTalk"
+    show ignias at left with dissolve
+    ignias "Moira, how many imps do we have that could immediately be reassigned to soul extraction without plunging everything else into chaos?"
+    $moira_mood = "DefaultTalk"
+    show moira at right with dissolve
+    play soundMoi "audio/Moira/Yes 1.mp3"
+    narrator "Quickly performs some mental calculations"
+    moira "… Well, the records department could probably spare a few wretches to man the vats."
+    $ignias_mood = "Happy"
+    play sound "audio/Ignias/I_see.mp3"
+    narrator "Yells loudly in the vague direction of the doo"
+    ignias "Get in here 1!"
+    narrator "The door opens with a thud as an imp hastily enters the office"
+    hide moira  with dissolve
+    show imp at right with moveinright
+    imp "Yes, Milord?"
+    $ignias_mood = "DefaultTalk"
+    play sound "audio/Ignias/go_ahead.mp3"
+    ignias "Go to those fools in records and tell them to send half of their staff to man the extraction vats."
+    narrator "The imp bows haphazardly and flutters out the door"
+    hide imp with moveoutright
+    show moira at right with dissolve
+    play soundMoi "audio/Moira/0h 3.mp3"
+    narrator "Rubs her hands and sighs"
+    moira "Well, let’s hope this will keep them busy."
+    narrator "Ignias nods, and Moira leaves the room"
+    hide moira with moveoutright
+    hide ignias with dissolve
+
+    jump queenly
+
+label a38:
+    $increaseImpeachment(8.13)
+    $increaseStress(8.13)
+    $ignias_mood = "DefaultTalk"
+    $moira_mood = "DefaultTalk"
+    show ignias at left
+    show moira at right 
+    with dissolve
+    play sound "audio/Ignias/hold_on.mp3"
+    ignias "Moira, since you have been working on our delivery contracts: Can you draw up an A38 for me dated on our first day at the office?"
+    play soundMoi "audio/Moira/hmm 9.mp3"
+    narrator "Moira Shrugs"
+    moira "That shouldn’t be too hard. I cannot make any guarantees as to how long such a contract would be able to fool the old coots in records, though."
+    ignias "Well, it’s not like we have many options here. Let me worry about the imps, just draw up the contract and hand it to me."
+    narrator "Moira leaves and returns a little later with the requested document in hand. Ignias quickly signs it and sends it of the archive."
+
+    hide moira
+    hide ignias
+    with dissolve
+
+    jump queenly
+
+
+#CHOICES FROM QUEENLY DEALINGS  
+label takedeal:
+    $increaseSouls(17.04)
+    $increaseSouls(17.04)
+    $increaseSouls(17.04)
+    $increaseStress(8.13)
+    $ignias_mood = "DefaultTalk"
+    $qoe_mood = "Happy"
+    show ignias at left
+    show qoe at right
+    with dissolve
+
+    play sound "audio/Ignias/Yes.mp3"
+    ignias "Queen, you have my support."
+    play sound "audio/QueenOfEyes/AFavourableBargain.mp3"
+    qoe "You are wise beyond your centuries, young Firestarter. The delivery of freshly harvested souls will continue to run via the docks, starting today."
+    play sound "audio/QueenOfEyes/Yes.mp3"
+    qoe "I will send word when the time is right. Be sure that should you tell anyone of what happened in this room, there will be a punishment that even Lucifer himself could not afflict on you."
+    narrator "Ignias Bows slightly."
+    ignias "Perish the thought dear colleague."
+
+    hide ignias
+    hide qoe 
+    hide screen baroverlay
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    scene black
+    with dissolve
+
+    scene bgHell
+    show screen baroverlay
+    show screen soulbar
+    show screen stressbar
+    show screen impeachmentbar
+    with fade
+    show ignias at left with dissolve
+    narrator "Ignias leaves the queen behind, mulling over what just transpired. Back at his office he commits himself to mundane paperwork, to clear his mind of errant thoughts."
+    hide ignias
+    hide screen baroverlay
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    with dissolve
+
+    jump minigame3
+
+
+label decline:
+    $increaseStress(8.13)
+    $increaseStress(8.13)
+    $ignias_mood = "DefaultTalk"
+    $qoe_mood = "Mad"
+    show ignias at left
+    show qoe at right
+    with dissolve
+
+    play sound "audio/Ignias/no.mp3"
+    ignias "I thank you for your offer, but fear that I must decline."
+    play sound "audio/QueenOfEyes/No.mp3"
+    narrator "Her gaze turns icy. "
+    qoe "Are you sure that this is the path you want to choose? There are many in the underworld that would gladly stab you thrice over to be where you are right now."
+    ignias "In this I am certain. I will of course remain silent about your offer and will bid my leave."
+    play sound "audio/QueenOfEyes/Tss.mp3"
+    qoe "Be sure that should you tell anyone of what happened in this room, there will be a punishment that even Lucifer himself could not afflict on you. Also know that there will not be opportunities like this in the future. Now, you are as the rest: On your own. Prey."
+
+    hide ignias
+    hide qoe 
+    hide screen baroverlay
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    scene black
+    with dissolve
+
+    scene bgHell
+    show screen baroverlay
+    show screen soulbar
+    show screen stressbar
+    show screen impeachmentbar
+    with fade
+    show ignias at left with dissolve
+    narrator "Ignias leaves the queen behind, mulling over what just transpired. Back at his office he commits himself to mundane paperwork, to clear his mind of errant thoughts."
+
+    hide ignias
+    hide screen baroverlay
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    with dissolve
+
+    jump minigame3
+
+label impkilling:
+    $increaseSouls(17.04)
+    $increaseImpeachment(8.13)
+    $ignias_mood = "DefaultTalk"
+    $twins_mood = "Default"
+    show ignias at left
+    show twins at right
+    with dissolve
+
+    play sound "audio/Ignias/yes.mp3"
+    ignias "Corruption, or Wish-Fulfillment, is our most sacred tradition."
+    play sound "audio/TwinF/Hmm interesting.mp3"
+    twinf "For a grub barely dry of Styx water you sure talk like old man Lucifer himself."
+    ignias """{i} Ignoring the sarcastic demon {/i}
+
+    I will send my most devious imps to twist their souls, and the matter will soon be resolved. Wardens, you can return to your post
+    """
+    narrator "The twins leave the office with mocking bows, and both parties are glad to be rid of each other. Ignias soon gets bogged down again in the minutia of running hell, partially."
+    hide twins with moveoutright
+
+    jump goodboy
+
+label collapse:
+    $increaseStress(8.13)
+    $ignias_mood = "DefaultTalk"
+    $twins_mood = "Suprised"
+    show ignias at left
+    show twins at right
+    with dissolve
+
+    ignias "I like your way of thinking, Modean."
+    play sound "audio/TwinM/interesting.mp3"
+    twinm "You do? That’s the first time in a long time someone said that."
+    ignias """ {i}Ignoring the sarcastic demon{/i}
+    
+    You can engineer an overflow of ichor from the gate, right? That should collapse their measly attempts at architecture."""
+    $twins_mood ="Suprised"
+    play sound "audio/TwinF/Copy that.mp3"
+    twinf "Yes, that should work. You sure are quick on the uptake, for a seatwarmer. Although Heaven will surely try to get back at us this way, but that’s more your concern than ours"
+    play sound "audio/Ignias/understood.mp3"
+    ignias """ {i}Ignoring the sarcastic demon{/i}
+    
+    I will deal with it when the time comes."""
+
+    narrator "The twins leave the office with mocking bows, and both parties are glad to be rid of each other. Ignias soon gets bogged down again in the minutia of running hell, partially. "
+    hide twins with moveoutright
+
+    jump goodboy
+
+label traindog:
+    $increaseStress(8.13)
+    $ignias_mood = "DefaultTalk"
+    $cerberus_mood = "Happy"
+    show ignias at left
+    show cerberus at right
+    with dissolve
+
+    ignias "Boy, I promise that this is the last time I let someone else try to tame my dog. How would you feel about me doing it for a change, hmm?"
+    play sound "audio/Cerb3.mp3"
+    cerb "Woof!"
+    $ignias_mood = "Happy"
+    play sound "audio/Ignias/Yes.mp3"
+    ignias "{i}Bows slightly to reach through the bars and pet the dog{/i}"
+    ignias "Good boy! Now, let me find your leash…"
+    
+    narrator "Ignias leaves the dungeon and returns to his office after playing a bit with Cerberus. His thoughts still linger on his dog as he tries to focus once again on his never-diminishing workload. "
+
+    hide ignias
+    hide screen baroverlay
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    scene black
+    with dissolve
+
+    scene bgHell
+    show screen baroverlay
+    show screen soulbar
+    show screen stressbar
+    show screen impeachmentbar
+    with fade
+    show ignias at left with dissolve
+
+    narrator "After long last, this workday also comes to a close. Ignias is torn between relief of having survived another day in his position and anxiety of what this day’s meeting with the boss would bring. His musings are interrupted by a familiar ring"#
+
+    play sound "audio/Lucifer/growling 3.mp3"
+    show lucifer at right with flash
+    lucifer "GOOD EVENING, OVERSEER 26. I TRUST
+    ALL IS WELL ON THIS FINE EVENING?"
+    play sound "audio/Ignias/no.mp3"
+    narrator "Ignias bows his head"
+    ignias "I have no irregularities to report, my Lord. Work continues, as does the flow of souls."
+    play sound "audio/Lucifer/chuckle 1.mp3"
+    lucifer """SPLENDID. I LOOK FORWARD TO YOUR
+    NEW DELIVERY TOMORROW AT THE USUAL TIME. AS YOU WELL KNOW, CONSIDER THE
+
+    REQUIRED AMOUNT TO BE ONE AND A HALF OF WHAT WAS REQUIRED OF YOU TODAY. DO NOT
+    TRY TO UNDERCUT IT. THAT WOULD GO VERY POORLY."""
+    hide lucifer with flash
+    narrator "The image disappears and leaves a resigned Ignias behind"
+    $ignias_mood = "Sad"
+    ignias "{i}I made it another day, barely. I can see now how the other Overseers are driven to acts of madness with extreme consequences to please Lucifer…{/i}"
+
+label seekexpert:
+    $increaseImpeachment(8.13)
+    $ignias_mood = "DefaultTalk"
+    $cerberus_mood = "Happy"
+    show ignias at left
+    show imp at right
+    with dissolve
+
+    ignias "Well, his appetite is bound to run out eventually. Do you know where one could find beast masters in the city?"
+    imp "Well, sire, there is this old place down in the slums where the old guard gets together to talk about the good old days. We would be certain to find one among them who could train your dog for you."
+    $ignias_mood = "Happy"
+    play sound "audio/Ignias/go_ahead.mp3"
+    ignias "Great! Make it so!"
+    narrator "The Imp Hastily moves up the stairs"
+    hide imp with moveoutright
+    show cerberus at right with dissolve
+    cerb "{i}Winces{/i}"
+    $ignias_mood = "DefaultTalk"
+    play sound "audio/Ignias/sorry.mp3"
+    ignias "Do not worry boy, the next one will be better than the last. I promise to come down here more often as well, it has been a while since I last played with you…"
+
+    narrator "Ignias leaves the dungeon and returns to his office after playing a bit with Cerberus. His thoughts still linger on his dog as he tries to focus once again on his never-diminishing workload. "
+
+    hide ignias
+    hide screen baroverlay
+    hide screen soulbar
+    hide screen stressbar
+    hide screen impeachmentbar
+    scene black
+    with dissolve
+
+    scene bgHell
+    show screen baroverlay
+    show screen soulbar
+    show screen stressbar
+    show screen impeachmentbar
+    with fade
+    show ignias at left with dissolve
+
+    narrator "After long last, this workday also comes to a close. Ignias is torn between relief of having survived another day in his position and anxiety of what this day’s meeting with the boss would bring. His musings are interrupted by a familiar ring"#
+
+    play sound "audio/Lucifer/growling 3.mp3"
+    show lucifer at right with flash
+    lucifer "GOOD EVENING, OVERSEER 26. I TRUST
+    ALL IS WELL ON THIS FINE EVENING?"
+    play sound "audio/Ignias/no.mp3"
+    narrator "Ignias bows his head"
+    ignias "I have no irregularities to report, my Lord. Work continues, as does the flow of souls."
+    play sound "audio/Lucifer/chuckle 1.mp3"
+    lucifer """SPLENDID. I LOOK FORWARD TO YOUR
+    NEW DELIVERY TOMORROW AT THE USUAL TIME. AS YOU WELL KNOW, CONSIDER THE
+
+    REQUIRED AMOUNT TO BE ONE AND A HALF OF WHAT WAS REQUIRED OF YOU TODAY. DO NOT
+    TRY TO UNDERCUT IT. THAT WOULD GO VERY POORLY."""
+    hide lucifer with flash
+    narrator "The image disappears and leaves a resigned Ignias behind"
+    $ignias_mood = "Sad"
+    ignias "{i}I made it another day, barely. I can see now how the other Overseers are driven to acts of madness with extreme consequences to please Lucifer…{/i}"
