@@ -4,8 +4,8 @@ label impshift:
     #VARIABLES
     $sabotage = True
     $overheat = False
-    $increaseImpeachment(8.13)
-    $increaseSouls(43)
+    $increaseImpeachment(14.2)
+    $increaseSouls(50)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -56,8 +56,8 @@ label equipment:
     #VARIABLES
     $sabotage = False
     $overheat = True
-    $increaseSouls(43)
-    $increaseStress(8.13)
+    $increaseSouls(50)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     play sound "audio/Ignias/huh2.mp3"
@@ -87,7 +87,7 @@ label equipment:
 
     #CHOICES EVENT 2
 label workload:
-    $increaseImpeachment(8.13)
+    $increaseImpeachment(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -100,6 +100,11 @@ label workload:
 
     play sound "audio/Imp/ImpAnnoyed.mp3"
     hide imp with moveoutright
+
+    $moira_mood = "Default"
+    show moira at right with dissolve
+    play soundMoi "audio/Moira/hmm 1.mp3"
+    moira "Try to sort the documents into their designated stacks. Just keep an eye on the symbols and you should be good! Be careful to not mix them up, these are directly connected to our daily flow of souls!"
     hide ignias
     with dissolve
     hide screen soulbar
@@ -110,7 +115,7 @@ label workload:
     jump minigame
 
 label keepbusy:
-    $increaseStress(8.13)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -123,6 +128,12 @@ label keepbusy:
 
     
     hide imp with moveoutright
+
+    $moira_mood = "Default"
+    show moira at right with dissolve
+    play soundMoi "audio/Moira/hmm 1.mp3"
+    moira "Try to sort the documents into their designated stacks. Just keep an eye on the symbols and you should be good! Be careful to not mix them up, these are directly connected to our daily flow of souls!"
+    
     hide moira
     hide ignias
     with dissolve
@@ -135,7 +146,7 @@ label keepbusy:
 
     #CHOICES EVENT 3
 label pesticide:
-    $increaseImpeachment(8.13)
+    $increaseImpeachment(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -159,7 +170,7 @@ label pesticide:
     jump competition
 
 label relocate:
-    $increaseStress(8.13)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -184,8 +195,8 @@ label relocate:
 
     #CHOICES EVENT 4
 label goig:
-    $increaseStress(8.13)
-    $increaseSouls(43)
+    $increaseStress(14.2)
+    $increaseSouls(50)
     $ neighbourhoodBeef = True
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
@@ -206,7 +217,7 @@ label goig:
     jump endDayOne
 
 label goimp:
-    $increaseImpeachment(8.13)
+    $increaseImpeachment(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -253,7 +264,7 @@ label goimp:
 
     #CHOICES FOR DAY 36
 label standstill:
-    $increaseStress(8.13)
+    $increaseStress(14.2)
     show ignias at left
     show imp at right
     with dissolve
@@ -262,16 +273,16 @@ label standstill:
     imp "{i}the Imp bows hastily, then flutters out into the hallway{/i}"
 
     hide imp with moveoutright
-    if impeachment > 65:
+    if impeachment > 99:
         jump impeachmentend
-    elif stress > 65:
+    elif stress > 99:
         jump stressend
     else:
         jump heavensouls
 
 label coolvats:
-    $increaseImpeachment(8.13)
-    $increaseSouls(14.2)
+    $increaseImpeachment(14.2)
+    $increaseSouls(12.5)
     show ignias at left
     show imp at right
     with dissolve
@@ -289,8 +300,8 @@ label coolvats:
 
 
 label workextra:
-    $increaseSouls(14.2)
-    $increaseStress(8.13)
+    $increaseSouls(12.5)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left
     show imp at right
@@ -301,17 +312,17 @@ label workextra:
     narrator "the imps nod hastily and retreat down the corridor"
 
     hide imp with moveoutright
-    if impeachment > 65:
+    if impeachment > 99:
         jump impeachmentend
-    elif stress > 65:
+    elif stress > 99:
         jump stressend
     else:
         jump heavensouls
 
 
 label repairvats:
-    $increaseSouls(14.2)
-    $increaseImpeachment(8.13)
+    $increaseSouls(12.5)
+    $increaseImpeachment(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left
     show imp at right
@@ -335,9 +346,9 @@ label repairvats:
     hide moira with moveoutright
 
     narrator "Alone with his thoughts, he manages to get little work done over the next couple of hours."
-    if impeachment > 65:
+    if impeachment > 99:
         jump impeachmentend
-    elif stress > 65:
+    elif stress > 99:
         jump stressend
     else:
         jump heavensouls
@@ -345,8 +356,8 @@ label repairvats:
 
     #CHOICES EVENT Souls which actually belong in heaven got extracted
 label keepsouls:
-    $increaseSouls(14.2)
-    $increaseStress(8.13)
+    $increaseSouls(12.5)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -360,9 +371,9 @@ label keepsouls:
     narrator "Moira eyes him with concern and leaves"
 
     hide moira with moveoutright
-    if impeachment > 65:
+    if impeachment > 99:
         jump impeachmentend
-    elif stress > 65:
+    elif stress > 99:
         jump stressend
     else:
         hide ignias
@@ -375,8 +386,8 @@ label keepsouls:
         jump minigame2
 
 label callheaven:
-    $increaseImpeachment(8.13)
-    $increaseStress(8.13)
+    $increaseImpeachment(14.2)
+    $increaseStress(14.2)
     $ignias_mood ="MadTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -393,9 +404,9 @@ label callheaven:
     $ignias_mood ="Sad"
 
     ignias "{i}Ignias pinches the bridge of his nose, wondering how he will make it through the day at this rate{/i}"
-    if impeachment > 65:
+    if impeachment > 99:
         jump impeachmentend
-    elif stress > 65:
+    elif stress > 99:
         jump stressend
     else:
         hide ignias
@@ -409,8 +420,8 @@ label callheaven:
 
     #CHOICES EVENT Lucifer wants specific souls
 label corrupt:
-    $increaseSouls(14.2)
-    $increaseStress(8.13)
+    $increaseSouls(12.5)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -426,15 +437,15 @@ label corrupt:
     hide ignias with moveoutleft
     play soundMoi "audio/Moira/yawn.mp3"
     hide moira with dissolve
-    if impeachment > 65:
+    if impeachment > 99:
         jump impeachmentend
-    elif stress > 65:
+    elif stress > 99:
         jump stressend
     else:
         jump hellhoundescape
 label impsearch:
-    $increaseSouls(14.2)
-    $increaseImpeachment(8.13)
+    $increaseSouls(12.5)
+    $increaseImpeachment(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -451,9 +462,9 @@ label impsearch:
     hide ignias with moveoutleft
     hide moira with dissolve
 
-    if impeachment > 65:
+    if impeachment > 99:
         jump impeachmentend
-    elif stress > 65:
+    elif stress > 99:
         jump stressend
     else:
         jump hellhoundescape
@@ -462,7 +473,7 @@ label impsearch:
 
     #CHOICES EVENT Hellhound escapes
 label askmoira:
-    $increaseStress(8.13)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     show moira at right with dissolve
@@ -478,8 +489,8 @@ label askmoira:
 
     jump end
 label sendimps:
-    $increaseStress(8.13)
-    $decreaseImpeachment(8.13)
+    $increaseStress(14.2)
+    $decreaseImpeachment(14.2)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
 
@@ -502,6 +513,8 @@ label sendimps:
     ignias "{i}I hope Kerberos eats him.{/i}"
 
     hide ignias with dissolve
+
+
     jump end
 
 
@@ -512,8 +525,8 @@ label sendimps:
 
 #CHOICES FORM KERFUFFLE
 label busymorework:
-    $increaseStress(8.13)
-    $increaseSouls(17.04)
+    $increaseStress(14.2)
+    $increaseSouls(25)
     $ignias_mood = "DefaultTalk"
     show ignias at left with dissolve
     ignias "Moira, how many imps do we have that could immediately be reassigned to soul extraction without plunging everything else into chaos?"
@@ -543,11 +556,16 @@ label busymorework:
     hide moira with moveoutright
     hide ignias with dissolve
 
-    jump queenly
+    if impeachment > 99:
+        jump impeachmentend
+    elif stress > 99:
+        jump stressend
+    else:
+        jump queenly
 
 label a38:
-    $increaseImpeachment(8.13)
-    $increaseStress(8.13)
+    $increaseImpeachment(14.2)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     $moira_mood = "DefaultTalk"
     show ignias at left
@@ -565,15 +583,20 @@ label a38:
     hide ignias
     with dissolve
 
-    jump queenly
+    if impeachment > 99:
+        jump impeachmentend
+    elif stress > 99:
+        jump stressend
+    else:
+        jump queenly
 
 
 #CHOICES FROM QUEENLY DEALINGS  
 label takedeal:
-    $increaseSouls(17.04)
-    $increaseSouls(17.04)
-    $increaseSouls(17.04)
-    $increaseStress(8.13)
+    $increaseSouls(25)
+    $increaseSouls(25)
+    $increaseSouls(25)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     $qoe_mood = "Happy"
     show ignias at left
@@ -606,19 +629,25 @@ label takedeal:
     with fade
     show ignias at left with dissolve
     narrator "Ignias leaves the queen behind, mulling over what just transpired. Back at his office he commits himself to mundane paperwork, to clear his mind of errant thoughts."
-    hide ignias
-    hide screen baroverlay
-    hide screen soulbar
-    hide screen stressbar
-    hide screen impeachmentbar
-    with dissolve
+    
 
-    jump minigame3
+    if impeachment > 99:
+        jump impeachmentend
+    elif stress > 99:
+        jump stressend
+    else:
+        hide ignias
+        hide screen baroverlay
+        hide screen soulbar
+        hide screen stressbar
+        hide screen impeachmentbar
+        with dissolve
+        jump minigame3
 
 
 label decline:
-    $increaseStress(8.13)
-    $increaseStress(8.13)
+    $increaseStress(14.2)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     $qoe_mood = "Mad"
     show ignias at left
@@ -652,18 +681,24 @@ label decline:
     show ignias at left with dissolve
     narrator "Ignias leaves the queen behind, mulling over what just transpired. Back at his office he commits himself to mundane paperwork, to clear his mind of errant thoughts."
 
-    hide ignias
-    hide screen baroverlay
-    hide screen soulbar
-    hide screen stressbar
-    hide screen impeachmentbar
-    with dissolve
+    
 
-    jump minigame3
+    if impeachment > 99:
+        jump impeachmentend
+    elif stress > 99:
+        jump stressend
+    else:
+        hide ignias
+        hide screen baroverlay
+        hide screen soulbar
+        hide screen stressbar
+        hide screen impeachmentbar
+        with dissolve
+        jump minigame3
 
 label impkilling:
-    $increaseSouls(17.04)
-    $increaseImpeachment(8.13)
+    $increaseSouls(25)
+    $increaseImpeachment(14.2)
     $ignias_mood = "DefaultTalk"
     $twins_mood = "Default"
     show ignias at left
@@ -672,7 +707,7 @@ label impkilling:
 
     play sound "audio/Ignias/yes.mp3"
     ignias "Corruption, or Wish-Fulfillment, is our most sacred tradition."
-    play sound "audio/TwinF/Hmm interesting.mp3"
+    play soundTwinf "audio/TwinF/Hmm interesting.mp3"
     twinf "For a grub barely dry of Styx water you sure talk like old man Lucifer himself."
     ignias """{i} Ignoring the sarcastic demon {/i}
 
@@ -681,10 +716,15 @@ label impkilling:
     narrator "The twins leave the office with mocking bows, and both parties are glad to be rid of each other. Ignias soon gets bogged down again in the minutia of running hell, partially."
     hide twins with moveoutright
 
-    jump goodboy
+    if impeachment > 99:
+        jump impeachmentend
+    elif stress > 99:
+        jump stressend
+    else:
+        jump goodboy
 
 label collapse:
-    $increaseStress(8.13)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     $twins_mood = "Suprised"
     show ignias at left
@@ -692,13 +732,13 @@ label collapse:
     with dissolve
 
     ignias "I like your way of thinking, Modean."
-    play sound "audio/TwinM/interesting.mp3"
+    play soundTwinm "audio/TwinM/interesting.mp3"
     twinm "You do? That’s the first time in a long time someone said that."
     ignias """ {i}Ignoring the sarcastic demon{/i}
     
     You can engineer an overflow of ichor from the gate, right? That should collapse their measly attempts at architecture."""
     $twins_mood ="Suprised"
-    play sound "audio/TwinF/Copy that.mp3"
+    play soundTwinf "audio/TwinF/Copy that.mp3"
     twinf "Yes, that should work. You sure are quick on the uptake, for a seatwarmer. Although Heaven will surely try to get back at us this way, but that’s more your concern than ours"
     play sound "audio/Ignias/understood.mp3"
     ignias """ {i}Ignoring the sarcastic demon{/i}
@@ -708,10 +748,15 @@ label collapse:
     narrator "The twins leave the office with mocking bows, and both parties are glad to be rid of each other. Ignias soon gets bogged down again in the minutia of running hell, partially. "
     hide twins with moveoutright
 
-    jump goodboy
+    if impeachment > 99:
+        jump impeachmentend
+    elif stress > 99:
+        jump stressend
+    else:
+        jump goodboy
 
 label traindog:
-    $increaseStress(8.13)
+    $increaseStress(14.2)
     $ignias_mood = "DefaultTalk"
     $cerberus_mood = "Happy"
     show ignias at left
@@ -726,11 +771,16 @@ label traindog:
     ignias "{i}Bows slightly to reach through the bars and pet the dog{/i}"
     ignias "Good boy! Now, let me find your leash…"
     
-    jump endDay18
+    if impeachment > 99:
+        jump impeachmentend
+    elif stress > 99:
+        jump stressend
+    else:
+        jump endDay18
     
 
 label seekexpert:
-    $increaseImpeachment(8.13)
+    $increaseImpeachment(14.2)
     $ignias_mood = "DefaultTalk"
     $cerberus_mood = "Happy"
     show ignias at left
@@ -750,4 +800,9 @@ label seekexpert:
     play sound "audio/Ignias/sorry.mp3"
     ignias "Do not worry boy, the next one will be better than the last. I promise to come down here more often as well, it has been a while since I last played with you…"
 
-    jump endDay18
+    if impeachment > 99:
+        jump impeachmentend
+    elif stress > 99:
+        jump stressend
+    else:
+        jump endDay18

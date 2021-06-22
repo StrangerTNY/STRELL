@@ -7,14 +7,14 @@
 define e = Character("Eileen")
 
 #CHARACTERS
-define ignias = Character("Ignias", who_color="#B29782")
-define moira = Character("Moira", who_color="#c285e0")
-define imp = Character("Imp")
-define lucifer = Character("Lucifer", who_color="#1f0000")
-define twinm = Character("Modean", who_color="#000075")
-define twinf = Character("Mastema", who_color="#000075")
-define qoe = Character ("Queen of Eyes", who_color="32174d")
-define cerb = Character ("Cerberus", who_color = "#cfcfc4")
+define ignias = Character("Ignias", who_color="#ffffff")
+define moira = Character("Moira", who_color="#ffffff")
+define imp = Character("Imp", who_color ="#ffffff")
+define lucifer = Character("Lucifer", who_color="#ffffff")
+define twinm = Character("Modean", who_color="#ffffff")
+define twinf = Character("Mastema", who_color="#ffffff")
+define qoe = Character ("Queen of Eyes", who_color="ffffff")
+define cerb = Character ("Cerberus", who_color = "#ffffff")
 
 #IMAGES
 image bgHell = im.Scale("OfficeBG.jpg", 1920, 1080)
@@ -692,7 +692,7 @@ default countermg = 0
 init python:
     def minigamecallback (drags,drop):    
         global countermg
-        if countermg > 18:
+        if countermg > 15:
             countermg = 1
         if not drop:
             return
@@ -722,11 +722,6 @@ init python:
             drags[0].droppable = True
             drags[0].bottom()
             countermg += 1
-        elif(drags[0].drag_name == "Ignias6"):
-            drags[0].draggable = False
-            drags[0].droppable = True
-            drags[0].bottom()
-            countermg += 1
         elif(drags[0].drag_name == "Imp1"):
             drags[0].draggable = False
             drags[0].droppable = True
@@ -748,11 +743,6 @@ init python:
             drags[0].bottom()
             countermg += 1
         elif(drags[0].drag_name == "Imp5"):
-            drags[0].draggable = False
-            drags[0].droppable = True
-            drags[0].bottom()
-            countermg += 1
-        elif(drags[0].drag_name == "Imp6"):
             drags[0].draggable = False
             drags[0].droppable = True
             drags[0].bottom()
@@ -782,15 +772,10 @@ init python:
             drags[0].droppable = True
             drags[0].bottom()
             countermg += 1
-        elif(drags[0].drag_name == "Lucifer6"):
-            drags[0].draggable = False
-            drags[0].droppable = True
-            drags[0].bottom()
-            countermg += 1
         else:
             return
 
-        if countermg == 18:
+        if countermg == 15:
             return True
         else:
             return
@@ -857,13 +842,6 @@ screen minigame:
             dragged minigamecallback
             xpos 67 ypos 672
 
-        drag:
-            drag_name "Ignias6"
-            child "/Minigame/PaperIgnias.png"
-            draggable True
-            droppable False
-            dragged minigamecallback
-            xpos 358 ypos 538
     
 
     draggroup:
@@ -914,13 +892,6 @@ screen minigame:
             dragged minigamecallback
             xpos 614 ypos 533
     
-        drag:
-            drag_name "Imp6"
-            child "/Minigame/PaperImps.png"
-            draggable True
-            droppable False
-            dragged minigamecallback
-            xpos 1115 ypos 586
 
     draggroup:
         #Where the Paper needs to be on LUCIFER
@@ -953,7 +924,7 @@ screen minigame:
             draggable True
             droppable False
             dragged minigamecallback
-            xpos 248 ypos 694
+            xpos 748 ypos 694
         
         drag:
             drag_name "Lucifer4"
@@ -971,13 +942,6 @@ screen minigame:
             dragged minigamecallback
             xpos 468 ypos 604
 
-        drag:
-            drag_name "Lucifer6"
-            child "/Minigame/PaperLucifer.png"
-            draggable True
-            droppable False
-            dragged minigamecallback
-            xpos 389 ypos 510
 
 
 #Initializing all flags functions etc.
@@ -991,6 +955,8 @@ init:
 
     #Custom Music Channels
     $renpy.music.register_channel("soundMoi", mixer ="voice", loop = False)
+    $renpy.music.register_channel("soundTwinm", mixer ="voice", loop = False)
+    $renpy.music.register_channel("soundTwinf", mixer ="voice", loop = False)
     $renpy.music.register_channel("timer", mixer ="music", loop = False)
     $renpy.music.register_channel("minigame", mixer ="music", loop = False)
     
@@ -1005,8 +971,8 @@ init:
             global counter
             counter = 0
             while counter < val:
-                if(stress < 0 or stress > 100):
-                    renpy.jump("gameover")
+                #if(stress < 0 or stress > 100):
+                #   renpy.jump("gameover")
                 stress += 1
                 counter += 1
                 renpy.pause(0.01)
@@ -1091,6 +1057,8 @@ label start:
     $renpy.movie_cutscene('images/LoadingScreenNoLoop.ogv', loops = 3)
     $renpy.music.set_volume(0.1,channel=u"music")
     $renpy.music.set_volume(0.4,channel=u"soundMoi")
+    $renpy.music.set_volume(0.35,channel=u"soundTwinm")
+    $renpy.music.set_volume(1.75,channel=u"soundTwinf")
     play music "audio/myuu-dark-creature.mp3" loop
 
     #Start of the Game

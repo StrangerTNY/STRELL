@@ -281,6 +281,7 @@ label heavensouls:
 label minigame2:
     #Minigame Test
     $ minigame_jump = 'lucifersouls'
+    stop music
     play minigame "audio/Minigame.mp3"
     call screen minigame 
 

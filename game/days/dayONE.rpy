@@ -381,6 +381,7 @@ label ImpasWantMore:
 label minigame:
     #Minigame Test
     $ minigame_jump = 'infestation'
+    stop music
     play minigame "audio/Minigame.mp3"
     call screen minigame 
 
@@ -625,7 +626,7 @@ label endDayOne:
     scene bgHell
     with fade
 
-    if souls < 85:
+    if souls < 80:
         jump soulend
 
     narrator "After long hours of work, the day draws to a close.

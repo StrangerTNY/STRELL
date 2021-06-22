@@ -200,6 +200,7 @@ label queenly:
 label minigame3:
     #Minigame Test
     $ minigame_jump = 'gates'
+    stop music
     play minigame "audio/Minigame.mp3"
     call screen minigame 
 
@@ -237,18 +238,18 @@ label gates:
     show twins at right with moveinright
     narrator "The demonic twins enter the office, looking stressed"
     $twins_mood = "Suprised"
-    play sound "audio/TwinM/ts.mp3"
+    play soundTwinm "audio/TwinM/ts.mp3"
     twinm "They put you in charge of US? I thought the old guy thought more of us than that."
-    play sound "audio/TwinF/tsk pathetic.mp3"
+    play soundTwinf "audio/TwinF/tsk.mp3"
     twinf "Maybe he still has not forgiven us for that stunt a while back. Do you remember, brother?"
-    play sound "audio/TwinM/boring.mp3"
+    play soundTwinm "audio/TwinM/boring.mp3"
     twinm "Well, if he keeps this up, he is going to have another thing coming."
     $ignias_mood = "Suprised"
     play sound "audio/Ignias/what.mp3"
     narrator "Having trouble interrupting the siblings, Ignias finally finds an opening"
     ignias "I can understand that you are not happy working under me, but this is how Lucifer ordered it. Now, he mentioned something was troubling you?"
     $twins_mood = "Default"
-    play sound "audio/TwinF/snort.mp3"
+    play soundTwinf "audio/TwinF/snort.mp3"
     twinf "{i}Turning to her brother{/i}"
     twinf "Should we even bother telling him? It's not like this grub could even do anything."
     twinm "Well, at least for the time being Big L still calls the shots around here, so we gotta do it. Even if this sorry excuse for an Overlord is involved"
@@ -257,19 +258,19 @@ label gates:
     ignias "{i}Resigned{/i}"
     ignias "Please just tell me what is going on. The sooner you tell me, the sooner we can all go our separate ways again."
     $twins_mood = "Mad"
-    play sound "audio/TwinF/hmph.mp3"
+    play soundTwinf "audio/TwinF/hmph.mp3"
     twinf "{i}Pouting{/i}"
     twinf "Fine! The trouble is as follows: Its those damned mortals! But not in their delicious, soft, and squishy form after shedding the coil, no, these grunts are still in the flesh. They have somehow gotten close to locating one of the ancient entrances to hell"
-    play sound "audio/TwinM/no.mp3"
+    play soundTwinm "audio/TwinM/no.mp3"
     twinm "They apparently think of using hell as an energy source. Imagine that! Cattle seeking to cage and milk the wolves. Pathetic."#
     ignias "Well, if these mortals are indeed so pathetic, then why not go deal with them? Offer one of them all his desires, to, say, kill all the others. You now, the standard stuff?"
-    play sound "audio/TwinM/sigh.mp3"
+    play soundTwinm "audio/TwinM/sigh.mp3"
     twinm "Don’t you think if it were that easy for us, we would not have done so already? We are bound to the gates of hell; we cannot do that stuff on our own."
     $twins_mood = "Default"
-    play sound "audio/TwinF/pathetic.mp3"
+    play soundTwinf "audio/TwinF/pathetic.mp3"
     twinf "That’s where you come in, lardass. Now, these mortals are already very close to the entrance, so there probably will not be much time in offering contracts yourself, so you will send some of your minions to do the dirty work."
     $twins_mood = "Happy"
-    play sound "audio/TwinM/bad laugh.mp3"
+    play soundTwinm "audio/TwinM/bad laugh.mp3"
     twinm "There is also the possibility of simply collapsing their compound, killing the lot in one fell swoop. Now, Heaven would probably not be happy with that, since that would bending the rules a little too much for the featherfaces up there, but it would be the quickest way to deal with the situation."
     $twins_mood = "Default"
     twinf "Well, little Overseer? What’s the plan?"
