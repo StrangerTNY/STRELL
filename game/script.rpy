@@ -1151,7 +1151,7 @@ label credits:
     
 
 init python:
-    credits = ('Backgrounds', 'Svean Wandt'), ('Character Design', 'Svean Wandt'), ('GUI', 'Svean Wandt'), ('Writing', 'Lukas Even'), ('Programming', 'Tony Tu'), ('Music', 'Fabian Braun'), ('Ignias', 'Sascha Clausen'), ('Moira', 'Kristin Kmietzak'), ('Imp', 'Lukas Even') , ('Lucifer', 'Sascha Clausen'), ('Queen Of Eyes', 'Friederike Fröhlich'), ('Mastema & Modean', 'Svea Wandt & Lukas Büsen')
+    credits = ('Backgrounds', 'Svea Wandt'), ('Character Design', 'Svea Wandt'), ('GUI', 'Svea Wandt'), ('Writing', 'Lukas Even'), ('Programming', 'Tony Tu'), ('Music', 'Fabian Braun'), ('Ignias', 'Sascha Clausen'), ('Moira', 'Kristin Kmietzak'), ('Imp', 'Lukas Even') , ('Lucifer', 'Sascha Clausen'), ('Queen Of Eyes', 'Friederike Fröhlich'), ('Mastema & Modean', 'Svea Wandt & Lukas Büsen')
     credits_s = "{size=80}STRELL\n\n"
     c1 = ''
     for c in credits:
