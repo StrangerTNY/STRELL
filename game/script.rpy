@@ -1102,16 +1102,17 @@ label start:
     scene black
     with dissolve
 
-    #Start Day 36
-    $ souls = 0
-    call callDay2 from _call_callDay2 
-    scene bgHell
-    show screen baroverlay
-    show screen soulbar
-    show screen stressbar
-    show screen impeachmentbar
-    with fade
-    call day36 from _call_day36
+    if stress < 99 and impeachment < 99:
+        #Start Day 36
+        $ souls = 0
+        call callDay2 from _call_callDay2 
+        scene bgHell
+        show screen baroverlay
+        show screen soulbar
+        show screen stressbar
+        show screen impeachmentbar
+        with fade
+        call day36 from _call_day36
 
 label credits:
     
